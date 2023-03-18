@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.52 194.52">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3 {
+        stroke: #fff;
+      }
+
+      .cls-2 {
+        fill: #2d6a4f;
+        stroke: #000;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Logo">
+    <g id="Green_and_bone">
+      <rect class="cls-2" x="1" y="1" width="192.52" height="192.52"/>
+      <rect id="LogoInit1" class="cls-3" x="112.62" y="42.88" width="14.35" height="102"/>
+      <polyline id="LogoInit2" class="cls-1" points="80.24 58.47 97.26 58.47 88.75 59.25 60.97 144.88 47.66 144.88"/>
+    </g>
+  </g>
+</svg>
