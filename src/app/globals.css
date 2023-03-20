@@ -4,19 +4,19 @@
 
 @layer base {
   .markdown h1 {
-    @apply text-4xl font-bold;
+    @apply text-4xl font-bold my-3;
   }
   .markdown h2 {
-    @apply text-3xl font-bold;
+    @apply text-3xl font-bold my-3;
   }
   .markdown h3 {
-    @apply text-2xl font-bold;
+    @apply text-2xl font-bold my-3;
   }
   .markdown h4 {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold my-3;
   }
   .markdown h5 {
-    @apply text-lg font-bold;
+    @apply text-lg font-bold my-3;
   }
 
   .markdown img {
@@ -29,6 +29,14 @@
 
   .markdown p {
     @apply mx-4;
+  }
+
+  .markdown pre {
+    @apply mx-10 border-[1px] border-gray-300 rounded-md pl-2 my-2 bg-gray-300;
+  }
+
+  .markdown a {
+    @apply text-blue-500 underline hover:text-blue-600;
   }
 }
 
