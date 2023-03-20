@@ -5,6 +5,7 @@ const rowdies = Rowdies({subsets: ['latin'], weight: '300'})
 
 interface Header1Props {
     children?: any;
+    id?: string;
 }
 
 export function StyledHeader({...otherProps}: Header1Props) {

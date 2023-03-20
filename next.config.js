@@ -1,3 +1,5 @@
+const withMDX = require('@next/mdx')()
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
@@ -6,6 +8,8 @@ const nextConfig = {
       { loader: 'next/font/google', options: { subsets: ['latin'] } },
     ],
   },
+
 }
 
-module.exports = nextConfig
+// Merge MDX config with Next.js config
+module.exports = withMDX(nextConfig)

@@ -1,5 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import {MainHeader} from "@/components/MainHeader";
 
 export const metadata: Metadata = {
     title: 'iliaabedian.com',
@@ -16,7 +17,12 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <body>
+                <MainHeader />
+                <div className={`pt-40`}>
+                    {children}
+                </div>
+            </body>
         </html>
     )
 }

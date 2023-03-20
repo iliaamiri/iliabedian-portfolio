@@ -26,6 +26,8 @@ module.exports = {
       },
       content: {
         githubIcon: 'url("/assets/icons/github.svg")',
+        linkedInIcon: 'url("/assets/icons/linkedin.svg")',
+        twitterIcon: 'url("/assets/icons/twitter.svg")',
       },
       colors: {
         primaryDawn: '#2D6A4F',

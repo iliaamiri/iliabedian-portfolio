@@ -22,18 +22,132 @@ type skills =
     | 'Redis'
     | 'MongoDB'
     | 'AWS'
-    |
-    'Azure'
+    | 'Azure'
+    | 'Vercel'
+    | 'Pusher.js'
+
     | 'Docker'
     | 'Virtual Machines'
     | 'Linux'
     | 'OOP'
     | 'MVC'
     | 'MVVM'
+    | 'Event-driven Architecture'
     | 'Serverless Functions'
-    | 'Microservices';
+    | 'Microservices'
+
+    | 'TailwindCSS'
+    | 'Material UI'
+    | 'Bootstrap'
+    | 'Figma'
+    | 'Styled Components'
+    | 'SASS'
+    | 'CSS'
+    | 'HTML'
+    | 'Git'
+    | 'GitHub'
+    | 'GitLab'
+    | 'Jira'
+    | 'OpenAI API'
+    | 'Trello'
+    | 'Railway'
+    | 'Prompt Engineering'
+| 'JSX'
+| 'OOP'
+| 'Prototyping'
+| 'UX'
+| 'UI'
+| 'Wireframing'
+| 'Sketching'
+| 'Design'
+| 'Illustration'
+| 'Animation'
+| 'Preact'
+| 'Vite'
+| 'Local Storage'
+| 'Socket.io'
+| 'Events'
+| 'EJS'
+
+
 
 export const technologies: Record<skills, TechnologyModel> = {
+    EJS: {
+        skillName: 'EJS',
+        confidenceLevel: 100
+    },
+    Events: {
+        skillName: 'Events',
+        confidenceLevel: 100
+    },
+    'Socket.io': {
+        skillName: 'Socket.io',
+        confidenceLevel: 100
+    },
+    Prototyping: {
+        skillName: "Prototyping",
+        confidenceLevel: 30
+    },
+    UX: {
+        skillName: "UX",
+        confidenceLevel: 45
+    },
+    UI: {
+        skillName: "UI",
+        confidenceLevel: 30
+    },
+    Wireframing: {
+        skillName: "Wireframing",
+        confidenceLevel: 25
+    },
+    Sketching: {
+        skillName: "Sketching",
+        confidenceLevel: 69
+    },
+    Design: {
+        skillName: "Design",
+        confidenceLevel: 30
+    },
+    Illustration: {
+        skillName: "Illustration",
+        confidenceLevel: 50
+    },
+    Animation: {
+        skillName: "Animation",
+        confidenceLevel: 80
+    },
+    Preact: {
+        skillName: "Preact",
+        confidenceLevel: 100
+    },
+    Vite: {
+        skillName: "Vite",
+        confidenceLevel: 96
+    },
+    'Local Storage': {
+        skillName: 'Local Storage',
+        confidenceLevel: 100
+    },
+    OOP: {
+        skillName: "OOP",
+        confidenceLevel: 100
+    },
+    'JSX': {
+        skillName: 'JSX',
+        confidenceLevel: 100
+    },
+    'Prompt Engineering': {
+        skillName: 'Prompt Engineering',
+        confidenceLevel: 69
+    },
+    Railway: {
+        skillName: "Railway",
+        confidenceLevel: 100
+    },
+    'Trello': {
+        skillName: 'Trello',
+        confidenceLevel: 100
+    },
     "C#": {
         skillName: "C#",
         confidenceLevel: 100
@@ -122,16 +236,20 @@ export const technologies: Record<skills, TechnologyModel> = {
         skillName: "Docker",
         confidenceLevel: 100
     },
+    'Pusher.js': {
+        skillName: 'Pusher.js',
+        confidenceLevel: 100
+    },
     "Virtual Machines": {
         skillName: "Virtual Machines",
         confidenceLevel: 100
     },
-    Linux: {
-        skillName: "Linux",
+    Vercel: {
+        skillName: "Vercel",
         confidenceLevel: 100
     },
-    OOP: {
-        skillName: "OOP",
+    Linux: {
+        skillName: "Linux",
         confidenceLevel: 100
     },
     MVC: {
@@ -142,6 +260,10 @@ export const technologies: Record<skills, TechnologyModel> = {
         skillName: "MVVM",
         confidenceLevel: 100
     },
+    'Event-driven Architecture': {
+        skillName: 'Event-driven Architecture',
+        confidenceLevel: 100
+    },
     "Serverless Functions": {
         skillName: "Serverless Functions",
         confidenceLevel: 100
@@ -149,6 +271,58 @@ export const technologies: Record<skills, TechnologyModel> = {
     Microservices: {
         skillName: "Microservices",
         confidenceLevel: 100
+    },
+    TailwindCSS: {
+        skillName: "TailwindCSS",
+        confidenceLevel: 100
+    },
+    "Material UI": {
+        skillName: "Material UI",
+        confidenceLevel: 100
+    },
+    Bootstrap: {
+        skillName: "Bootstrap",
+        confidenceLevel: 100
+    },
+    Figma: {
+        skillName: "Figma",
+        confidenceLevel: 100
+    },
+    "Styled Components": {
+        skillName: "Styled Components",
+        confidenceLevel: 100
+    },
+    SASS: {
+        skillName: "SASS",
+        confidenceLevel: 100
+    },
+    CSS: {
+        skillName: "CSS",
+        confidenceLevel: 100
+    },
+    HTML: {
+        skillName: "HTML",
+        confidenceLevel: 100
+    },
+    Git: {
+        skillName: "Git",
+        confidenceLevel: 100
+    },
+    GitHub: {
+        skillName: "GitHub",
+        confidenceLevel: 100
+    },
+    GitLab: {
+        skillName: "GitLab",
+        confidenceLevel: 100
+    },
+    Jira: {
+        skillName: "Jira",
+        confidenceLevel: 100
+    },
+    'OpenAI API': {
+        skillName: 'OpenAI API',
+        confidenceLevel: 85
     }
 };
 
