@@ -14,7 +14,7 @@ export default async function Page() {
             </StyledHeader>
             <ArtifactItem artifact={artifacts.coughie} isOnRight={false} />
             <div className={`flex flex-col items-center justify-center w-full ${ubuntu.className} markdown`} id={'readme'}>
-                <div className={`w-9/12 md:w-7/12`}>
+                <div className={`w-9/12 md:w-7/12 pb-20`}>
                     <CoughieMDX />
                 </div>
             </div>
