@@ -97,7 +97,7 @@ export const artifacts: Record<string, ArtifactModel> = {
             },
         ],
         githubUrl: "https://github.com/iliaamiri/coughie-app",
-        demoUrl: "",
+        demoUrl: "https://coughie-app-production.up.railway.app/",
         primaryThemeColor: "#81CBAC",
         tailwindClassDetection: "via-[#81CBAC]",
     }
