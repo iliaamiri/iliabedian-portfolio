@@ -31,6 +31,7 @@ module.exports = {
         githubIcon: 'url("/assets/icons/github.svg")',
         linkedInIcon: 'url("/assets/icons/linkedin.svg")',
         twitterIcon: 'url("/assets/icons/twitter.svg")',
+        headshotStefCredit: 'url("/assets/stef-credit.svg")',
       },
       colors: {
         primaryDawn: '#2D6A4F',
