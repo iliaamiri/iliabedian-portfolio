@@ -2,9 +2,8 @@ import {Inter, Rowdies, Ubuntu} from 'next/font/google'
 import {StyledHeader} from "@/components/StyledHeader";
 import {ArtifactItem} from "@/components/ArtifactItem";
 import {artifacts} from "@/lib/data/artifacts";
-import {MainHeader} from "@/components/MainHeader";
 import {Contact} from "@/app/contact";
-import {DiamondCube, DiamondCubeArtifactType} from "@/components/DiamondCube";
+import {DiamondCubeArtifactType} from "@/components/DiamondCube";
 import Link from "next/link";
 
 const inter = Inter({subsets: ['latin']})
