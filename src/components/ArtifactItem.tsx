@@ -11,7 +11,6 @@ const ubuntu = Ubuntu({subsets: ['latin'], weight: '500'})
 const rowdiesBold = Rowdies({subsets: ['latin'], weight: '700'})
 
 
-
 export function ArtifactItem({artifact, isOnRight = true}: { artifact: ArtifactModel, isOnRight: boolean }) {
 
     const firstSeparatorWidth = randomIntFromInterval(15, 70);
@@ -84,16 +83,18 @@ function ArtifactItemOnRight({artifact}: { artifact: ArtifactModel }) {
                         </div>
 
                         <div className={`flex gap-10 justify-center pb-10`}>
-                            <Link href={artifact.githubUrl ?? ""} >
-                                <ArtifactActionButton size={'medium'}
-                                                      className={`after:content-githubIcon relative z-10 button-view-on-github`}>View
-                                    on GitHub</ArtifactActionButton>
-                            </Link>
-                            <Link href={artifact.demoUrl ?? ""}>
-                                <ArtifactActionButton size={'medium'}
-                                                      className={`after:content-['🚀'] relative z-10 button-view-demo`}>View
-                                    Demo</ArtifactActionButton>
-                            </Link>
+                            <ArtifactActionButton size={'medium'}
+                                                  className={`after:content-githubIcon relative z-10 button-view-on-github`}>
+                                <Link href={artifact.githubUrl ?? ""}>
+                                    View on GitHub
+                                </Link>
+                            </ArtifactActionButton>
+                            <ArtifactActionButton size={'medium'}
+                                                  className={`after:content-['🚀'] relative z-10 button-view-demo`}>
+                                <Link href={artifact.demoUrl ?? ""}>
+                                    View Demo
+                                </Link>
+                            </ArtifactActionButton>
                         </div>
                     </div>
                     <div
@@ -138,16 +139,19 @@ function ArtifactItemOnLeft({artifact}: { artifact: ArtifactModel }) {
                         </div>
 
                         <div className={`flex gap-10 justify-center pb-10`}>
-                            <Link href={artifact.githubUrl ?? ""}>
-                                <ArtifactActionButton size={'medium'}
-                                                      className={`after:content-githubIcon relative z-10 button-view-on-github`}>View
-                                    on GitHub</ArtifactActionButton>
-                            </Link>
-                            <Link href={artifact.demoUrl ?? ""}>
-                                <ArtifactActionButton size={'medium'}
-                                                      className={`after:content-['🚀'] relative z-10 button-view-demo`}>View
-                                    Demo</ArtifactActionButton>
-                            </Link>
+                            <ArtifactActionButton size={'medium'}
+                                                  className={`after:content-githubIcon relative z-10 button-view-on-github`}>
+                                <Link href={artifact.githubUrl ?? ""}>
+                                    View on GitHub
+                                </Link>
+                            </ArtifactActionButton>
+
+                            <ArtifactActionButton size={'medium'}
+                                                  className={`after:content-['🚀'] relative z-10 button-view-demo`}>
+                                <Link href={artifact.demoUrl ?? ""}>
+                                    View Demo
+                                </Link>
+                            </ArtifactActionButton>
                         </div>
                     </div>
                     <div

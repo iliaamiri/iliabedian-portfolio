@@ -1,12 +1,19 @@
 import {randomIntFromInterval} from "@/lib/utils";
 
-export const AestheticRender = () => {
+const speedToAnimation = {
+    slow: ['animate-marqueeSlow', 'animate-marquee2Slow'],
+    fast: ['animate-marquee', 'animate-marquee2'],
+}
+
+export const AestheticRender = (seed: number = 10, speed: 'slow' | 'fast' = 'fast') => {
     const render = [];
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < seed; i++) {
+        const rand = randomIntFromInterval(2, 4);
+
         render.push(
             <div
                 style={{
-                    backgroundColor: `#${i % 2 == 0 ? 'A198EE' : '22246A'}`,
+                    backgroundColor: `#${i % rand == 0 ? '5441FF' : (i % (rand + 1) ? '52B788' : '22246A')}`,
                     width: `${randomIntFromInterval(30, 150)}px`,
                 }}
                 className={`w-fit h-[0.6rem] shrink-0 rounded-full`}></div>
@@ -15,10 +22,10 @@ export const AestheticRender = () => {
 
     return (
         <div className={`relative`}>
-            <div className={`flex flex-row gap-3 animate-marquee`}>
+            <div className={`flex flex-row gap-3 ${speedToAnimation[speed][0]}`}>
                 {render}
             </div>
-            <div className={`flex flex-row gap-3 absolute top-0 animate-marquee2`}>
+            <div className={`flex flex-row gap-3 absolute top-0 ${speedToAnimation[speed][1]}`}>
                 {render}
             </div>
         </div>

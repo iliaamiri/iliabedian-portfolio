@@ -12,7 +12,9 @@ module.exports = {
     extend: {
       animation: {
         marquee: 'marquee 25s linear infinite',
+        marqueeSlow: 'marquee 100s linear infinite',
         marquee2: 'marquee2 25s linear infinite',
+        marquee2Slow: 'marquee2 100s linear infinite',
       },
       keyframes: {
         marquee: {
@@ -29,6 +31,7 @@ module.exports = {
         linkedInIcon: 'url("/assets/icons/linkedin.svg")',
         twitterIcon: 'url("/assets/icons/twitter.svg")',
         headshotStefCredit: 'url("/assets/stef-credit.svg")',
+        linesSvg: 'url("/assets/lines.svg")',
       },
       colors: {
         primaryDawn: '#2D6A4F',

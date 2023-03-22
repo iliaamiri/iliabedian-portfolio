@@ -30,6 +30,8 @@ export function ArtifactCard({ artifact }: Props) {
                         {artifact.summaryText}
                     </p>
                 </div>
+                <div className={`relative -top-24 rounded-b-xl bg-[url('/assets/lines.svg')] bg-left-bottom h-14`}>
+                </div>
             </div>
         </Link>
     );
