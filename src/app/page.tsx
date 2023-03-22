@@ -23,13 +23,16 @@ export default function Home() {
                 </p>
             </div>
 
-            <div className={`${rowdies.className} flex flex-col md:flex-row gap-28 mt-32 md:mb-36`}>
+            <div className={`${rowdies.className} relative flex flex-col md:flex-row justify-center gap-28 mt-32 md:mb-36`}>
                 <div className={`flex flex-row rounded-2xl overflow-hidden -ml-5 md:ml-0 -rotate-45 bg-gradient-to-bl from-[#000000] via-[#000000] to-[#22AB00] w-[32rem] h-[32rem] md:w-[32rem] md:h-[32rem]`}>
                     <div className={`flex flex-row justify-start items-end`}>
                         <img src={'/assets/ilia-headshot.svg'} className={`h-5/6 rotate-45 relative top-20 left-0`} />
                     </div>
                 </div>
-                <div className={`flex flex-row justify-center md:justify-start pb-16 md:py-[0rem] lg:py-[4.4rem]`}>
+                <Link href={'https://callista-stefanie.com'}>
+                    <img src={'/assets/stef-credit.svg'} className={'absolute z-30 bottom-72 md:-bottom-16 lg:-bottom-36 left-0 lg:left-10 xl:left-[30rem] scale-[0.5] xl:scale-[0.7] cursor-pointer'}  alt={'Art by: Callista Stefanie Taswin'}/>
+                </Link>
+                <div className={`flex flex-row justify-center md:justify-start pb-16 md:py-[4.6rem] lg:py-[4.4rem]`}>
                     <div className={`flex flex-col justify-between`}>
                         <DiamondCubeArtifactType text={'Front-End Development'} />
                         <DiamondCubeArtifactType text={'Back-End Development'} />
@@ -41,9 +44,6 @@ export default function Home() {
                         <DiamondCubeArtifactType text={'Cybersecurity'} />
                     </div>
                 </div>
-                <Link href={'https://callista-stefanie.com'}>
-                    <img src={'/assets/stef-credit.svg'} className={'absolute z-30 -bottom-72 md:-bottom-96 -left-6 md:left-10 scale-[0.5] cursor-pointer'}  alt={'Art by: Callista Stefanie Taswin'}/>
-                </Link>
             </div>
 
             <StyledHeader>
