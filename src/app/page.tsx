@@ -49,15 +49,12 @@ export default function Home() {
             <StyledHeader>
                 Artifacts
             </StyledHeader>
-            <div className={`flex flex-col lg:flex-row w-full gap-5 items-center lg:items-stretch justify-items-stretch px-5`}>
+            <div className={`grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 w-full gap-5 items-stretch justify-items-center px-5`}>
                 <ArtifactCard artifact={artifacts.igaq} />
                 <ArtifactCard artifact={artifacts.interviewpal} />
                 <ArtifactCard artifact={artifacts.tacticalPigeons} />
+                <ArtifactCard artifact={artifacts.coughie} />
             </div>
-            {/* <ArtifactItem artifact={artifacts.igaq} isOnRight={false} /> */}
-            {/* <ArtifactItem artifact={artifacts.interviewpal} isOnRight={true} /> */}
-            {/* <ArtifactItem artifact={artifacts.tacticalPigeons} isOnRight={false} /> */}
-            {/* <ArtifactItem artifact={artifacts.coughie} isOnRight={true} /> */}
 
             <StyledHeader id={'contact'}>Contact</StyledHeader>
             <Contact />
