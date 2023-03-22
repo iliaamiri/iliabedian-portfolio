@@ -10,9 +10,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {
-        'tb': '640px',
-      },
       animation: {
         marquee: 'marquee 25s linear infinite',
         marquee2: 'marquee2 25s linear infinite',
