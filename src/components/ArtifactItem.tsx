@@ -5,34 +5,11 @@ import {XSThreeDots} from "@/components/ThreeDots";
 import {ArtifactActionButton} from "@/components/Button";
 import {randomIntFromInterval} from "@/lib/utils";
 import Link from "next/link";
+import {AestheticRender} from "@/components/AestheticRender";
 
 const ubuntu = Ubuntu({subsets: ['latin'], weight: '500'})
 const rowdiesBold = Rowdies({subsets: ['latin'], weight: '700'})
 
-const AestheticRender = () => {
-    const render = [];
-    for (let i = 0; i < 10; i++) {
-        render.push(
-            <div
-                style={{
-                    backgroundColor: `#${i % 2 == 0 ? 'A198EE' : '22246A'}`,
-                    width: `${randomIntFromInterval(30, 150)}px`,
-                }}
-                className={`w-fit h-[0.6rem] shrink-0 rounded-full`}></div>
-        );
-    }
-
-    return (
-        <div className={`relative`}>
-            <div className={`flex flex-row gap-3 animate-marquee`}>
-                {render}
-            </div>
-            <div className={`flex flex-row gap-3 absolute top-0 animate-marquee2`}>
-                {render}
-            </div>
-        </div>
-    );
-};
 
 export function ArtifactItem({artifact, isOnRight = true}: { artifact: ArtifactModel, isOnRight: boolean }) {
 
@@ -106,16 +83,18 @@ function ArtifactItemOnRight({artifact}: { artifact: ArtifactModel }) {
                         </div>
 
                         <div className={`flex gap-10 justify-center pb-10`}>
-                            <Link href={artifact.githubUrl ?? ""} >
-                                <ArtifactActionButton size={'medium'}
-                                                      className={`after:content-githubIcon relative z-10 button-view-on-github`}>View
-                                    on GitHub</ArtifactActionButton>
-                            </Link>
-                            <Link href={artifact.demoUrl ?? ""}>
-                                <ArtifactActionButton size={'medium'}
-                                                      className={`after:content-['🚀'] relative z-10 button-view-demo`}>View
-                                    Demo</ArtifactActionButton>
-                            </Link>
+                            <ArtifactActionButton size={'medium'}
+                                                  className={`after:content-githubIcon relative z-10 button-view-on-github`}>
+                                <Link href={artifact.githubUrl ?? ""}>
+                                    View on GitHub
+                                </Link>
+                            </ArtifactActionButton>
+                            <ArtifactActionButton size={'medium'}
+                                                  className={`after:content-['🚀'] relative z-10 button-view-demo`}>
+                                <Link href={artifact.demoUrl ?? ""}>
+                                    View Demo
+                                </Link>
+                            </ArtifactActionButton>
                         </div>
                     </div>
                     <div
@@ -160,16 +139,19 @@ function ArtifactItemOnLeft({artifact}: { artifact: ArtifactModel }) {
                         </div>
 
                         <div className={`flex gap-10 justify-center pb-10`}>
-                            <Link href={artifact.githubUrl ?? ""}>
-                                <ArtifactActionButton size={'medium'}
-                                                      className={`after:content-githubIcon relative z-10 button-view-on-github`}>View
-                                    on GitHub</ArtifactActionButton>
-                            </Link>
-                            <Link href={artifact.demoUrl ?? ""}>
-                                <ArtifactActionButton size={'medium'}
-                                                      className={`after:content-['🚀'] relative z-10 button-view-demo`}>View
-                                    Demo</ArtifactActionButton>
-                            </Link>
+                            <ArtifactActionButton size={'medium'}
+                                                  className={`after:content-githubIcon relative z-10 button-view-on-github`}>
+                                <Link href={artifact.githubUrl ?? ""}>
+                                    View on GitHub
+                                </Link>
+                            </ArtifactActionButton>
+
+                            <ArtifactActionButton size={'medium'}
+                                                  className={`after:content-['🚀'] relative z-10 button-view-demo`}>
+                                <Link href={artifact.demoUrl ?? ""}>
+                                    View Demo
+                                </Link>
+                            </ArtifactActionButton>
                         </div>
                     </div>
                     <div
