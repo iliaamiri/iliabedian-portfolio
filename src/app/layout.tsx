@@ -9,8 +9,8 @@ export const metadata: Metadata = {
         url: 'https://iliaabedian.com',
     },
     applicationName: "Ilia Abedian's Portfolio and Blog",
-    keywords: ['ilia', 'eiliya', 'abedianamiri', 'abedian', 'portfolio', 'blog', 'developer', 'software'],
-    description: 'I\'m a full-stack web developer, web-master, and researcher learning new things and creating semi-enterprise projects for my individual clients.',
+    keywords: ['ilia', 'eiliya', 'abedianamiri', 'abedian', 'portfolio', 'blog', 'developer', 'software engineer'],
+    description: 'Full-stack developer, software engineer, and researcher learning new things and building cool projects. Welcome to my portfolio.',
     icons: {
         icon: '/assets/logo/circle-cream.svg',
     },

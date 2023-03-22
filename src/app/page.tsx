@@ -19,8 +19,7 @@ export default function Home() {
                     E<span className={`text-[#2D6A4F]`}>ili</span>y<span className={`text-[#2D6A4F]`}>a</span> Abedianamiri
                 </h1>
                 <p className={'md:w-5/12'}>
-                    {/* eslint-disable-next-line react/no-unescaped-entities */}
-                    I'm a full-stack web developer, web-master, and researcher learning new things and creating semi-enterprise projects for my individual clients. Welcome to my portfolio.
+                    <span className={`text-[#2D6A4F]`}>Full-stack developer</span>, <span className={`text-[#2D6A4F]`}>software engineer</span>, and <span className={`text-[#2D6A4F]`}>researcher</span> learning new things and building cool projects. Welcome to my portfolio.
                 </p>
             </div>
 
