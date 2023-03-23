@@ -32,7 +32,7 @@ export function ThreeDotsBurgerMenu({containerClassName = ""}: Props) {
 }
 
 export function XSThreeDots({containerClassName = ""}: Props) {
-    let s = 'w-2 h-2 md:w-2 md:h-2 bg-[#A399FF] rounded shrink-0 grow-0 rotate-45';
+    let s = 'w-2 h-2 md:w-2 md:h-2 bg-[white] rounded shrink-0 grow-0 rotate-45';
     return (
         <div className={`${containerClassName} flex flex-col w-[1rem] md:w-[1.1rem]`}>
             <div className={`flex gap-[0.001rem] md:gap-[0.06rem]`}>
