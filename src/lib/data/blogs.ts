@@ -1,11 +1,10 @@
 export const blogs = {
-    1: {
+    'deploy-dotnet-app-on-railway-with-docker': {
         id: 1,
-        title: 'Blog 1',
-        slug: 'blog-1',
-        coverImage: 'https://picsum.photos/200/300',
-        description: 'Blog 1 description',
-        publishedAt: new Date(),
+        title: 'How to Deploy your .NET App on Railway using Docker',
+        slug: 'deploy-dotnet-app-on-railway-with-docker',
+        coverImage: '/assets/blog-covers/deploy-dotnet-on-railway-using-docker.svg',
+        publishedAt: new Date("2023-03-23"),
         timeToRead: 1,
         tags: ['tag1', 'tag2']
     },

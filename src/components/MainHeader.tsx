@@ -22,7 +22,7 @@ export function MainHeader({}: {}) {
             </div>
             <div className={`hidden lg:flex justify-center items-center gap-3`}>
                 <Link href={""}><MenuButton>Back-End</MenuButton></Link>
-                <Link href={""}><MenuButton>Blog</MenuButton></Link>
+                <Link href={"/blog"}><MenuButton>Blog</MenuButton></Link>
                 <Link href={"#contact"} scroll={false}><MenuButton>Contact</MenuButton></Link>
             </div>
         </nav>
