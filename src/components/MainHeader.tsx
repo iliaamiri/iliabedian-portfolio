@@ -14,6 +14,11 @@ export function MainHeader({}: {}) {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isHidden, setIsHidden] = useState(true);
+    const [origin, setOrigin] = useState<string>('');
+
+    useEffect(() => {
+        setOrigin(window.location.origin);
+    }, []);
 
     useEffect(() => {
         if (isMenuOpen) {
@@ -42,7 +47,7 @@ export function MainHeader({}: {}) {
                         <div className={`flex flex-col items-center w-full gap-10`}>
                             <Link href={"/"} onFocus={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Home</Link>
                             <Link href={"/blog"} onFocus={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Blog</Link>
-                            <ScrollLink scroll={false} href={"#contact"} onFocus={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Contact</ScrollLink>
+                            <ScrollLink scroll={false} href={`${origin}/#contact`} onFocus={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Contact</ScrollLink>
                         </div>
                     </div>
                 </div>
@@ -52,7 +57,7 @@ export function MainHeader({}: {}) {
             <div className={`hidden lg:flex justify-center items-center gap-3`}>
                 <Link href={"/"}><MenuButton>Home</MenuButton></Link>
                 <Link href={"/blog"}><MenuButton>Blog</MenuButton></Link>
-                <ScrollLink href={`${process.env.NEXT_PUBLIC_APP_URL}/#contact`}><MenuButton>Contact</MenuButton></ScrollLink>
+                <ScrollLink href={`${origin}/#contact`}><MenuButton>Contact</MenuButton></ScrollLink>
             </div>
         </nav>
     );
