@@ -2,7 +2,7 @@ import {StyledHeader} from "@/components/StyledHeader";
 import {ArtifactItem} from "@/components/ArtifactItem";
 import {artifacts} from "@/lib/data/artifacts";
 import {Roboto} from "next/font/google";
-import InterviewPalMDX from './interviewpal.mdx';
+import {Mdx} from "@/app/artifact-detail/interviewpal/mdx";
 
 const roboto = Roboto({subsets: ['latin'], weight: '400'});
 
@@ -16,7 +16,7 @@ export default async function InterviewPalPage() {
             <ArtifactItem artifact={artifacts.interviewpal} isOnRight={false} />
             <div className={`flex flex-col items-center justify-center w-full ${roboto.className} markdown`} id={'readme'}>
                 <div className={`w-9/12 md:w-7/12 pb-20`}>
-                    <InterviewPalMDX />
+                    <Mdx />
                 </div>
             </div>
         </div>
