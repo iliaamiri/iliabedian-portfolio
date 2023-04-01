@@ -24,7 +24,7 @@ export function Note({ children, type = "info" }: NoteProps) {
     return (
         <div className={`flex items-center justify-start gap-2 rounded-md p-4 my-8 ${bgColor}`}>
             <MdInfo className={`text-2xl ${iconClass}`} />
-            <div className="text-gray-800">{children}</div>
+            <div className="text-gray-800 break-words w-full">{children}</div>
         </div>
     );
 }

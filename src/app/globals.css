@@ -24,7 +24,7 @@
   }
 
   .markdown li {
-    @apply ml-8 text-xl leading-8 my-3;
+    @apply ml-8 text-xl leading-8 my-3 break-words;
   }
 
   .markdown ol li {
@@ -42,6 +42,14 @@
   .markdown pre {
     @apply border-[1px] border-gray-300 rounded-md pl-2 my-10 bg-gray-300;
   }
+
+  .markdown code:not([class]) {
+    @apply px-1.5 py-0.5 rounded font-mono bg-gray-200 text-gray-700;
+  }
+
+  /*.markdown code[class*='language-']:after {*/
+  /*  @apply absolute top-0 right-0 -mt-2 -mr-2 px-1.5 py-0.5 rounded font-mono bg-gray-200 text-gray-700;*/
+  /*}*/
 
   .markdown a {
     @apply text-blue-500 underline hover:text-blue-600;

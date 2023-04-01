@@ -1,4 +1,3 @@
-import {Warning} from '@/components/Markdown/Warning';
 import {Note} from '@/components/Markdown/Note';
 
 ## Before starting, make sure you have:
@@ -31,10 +30,41 @@ ENTRYPOINT ["dotnet", "MyApp.dll"]
 ```
 
 Imagining this is our app's source code:
+```bash
 /MyApp
 --/MyApp
 ----/[*Your MyApp project source code*]
 --/MyApp.sln
+```
+
+
+<Note type='warning'>
+if anyone is having their solution and project in the same folder, here's how your Dockerfile should almost look like this👇:
+</Note>
+
+```dockerfile
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+WORKDIR /src
+COPY ["BallApp.csproj", "./"]
+RUN dotnet restore "BallApp.csproj"
+COPY . .
+WORKDIR "/src/"
+RUN dotnet build "BallApp.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "BallApp.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "BallApp.dll"]
+```
+
 
 make a `railway.toml` file under `/MyApp` and with this content:
 ```toml
@@ -69,37 +99,8 @@ comment out the line that forces HTTPS redirection. (`app.UseHttpsRedirection();
 7. And maybe generate a new domain so that you can access your app via that.
 
 ## Resources, if you're curious
-- https://rendle.dev/posts/deploying-to-railway-with-dotnet/
-- https://docs.railway.app/develop/cli
-- https://stackoverflow.com/questions/70502758/how-do-i-inject-herokus-port-value-into-a-dotnet-core-6-0-web-api
-- https://stackoverflow.com/questions/38755516/how-to-change-the-port-number-for-asp-net-core-app
-- https://docs.railway.app/deploy/config-as-code
-
----
-
-<Note type='info'>
-if anyone is having their solution and project in the same folder, here's how your Dockerfile should almost look like:
-</Note>
-
-```dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
-WORKDIR /app
-EXPOSE 80
-EXPOSE 443
-
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
-WORKDIR /src
-COPY ["BallApp.csproj", "./"]
-RUN dotnet restore "BallApp.csproj"
-COPY . .
-WORKDIR "/src/"
-RUN dotnet build "BallApp.csproj" -c Release -o /app/build
-
-FROM build AS publish
-RUN dotnet publish "BallApp.csproj" -c Release -o /app/publish
-
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "BallApp.dll"]
-```
+- [https://rendle.dev/posts/deploying-to-railway-with-dotnet/](https://rendle.dev/posts/deploying-to-railway-with-dotnet/)
+- [https://docs.railway.app/develop/cli](https://docs.railway.app/develop/cli)
+- [https://stackoverflow.com/questions/70502758/how-do-i-inject-herokus-port-value-into-a-dotnet-core-6-0-web-api](https://stackoverflow.com/questions/70502758/how-do-i-inject-herokus-port-value-into-a-dotnet-core-6-0-web-api)
+- [https://stackoverflow.com/questions/38755516/how-to-change-the-port-number-for-asp-net-core-app](https://stackoverflow.com/questions/38755516/how-to-change-the-port-number-for-asp-net-core-app)
+- [https://docs.railway.app/deploy/config-as-code](https://docs.railway.app/deploy/config-as-code)

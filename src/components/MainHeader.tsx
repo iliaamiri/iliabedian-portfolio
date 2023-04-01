@@ -45,9 +45,9 @@ export function MainHeader({}: {}) {
                     <div className={`flex flex-row w-10/12`}>
                         <ThreeDotsBurgerMenu onClick={() => setIsMenuOpen(!isMenuOpen)} containerClassName={`flex justify-center rotate-[270deg]`} />
                         <div className={`flex flex-col items-center w-full gap-10`}>
-                            <Link href={"/"} onFocus={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Home</Link>
-                            <Link href={"/blog"} onFocus={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Blog</Link>
-                            <ScrollLink scroll={false} href={`${origin}/#contact`} onFocus={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Contact</ScrollLink>
+                            <Link href={"/"} onTouchEnd={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Home</Link>
+                            <Link href={"/blog"} onTouchEnd={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Blog</Link>
+                            <ScrollLink scroll={false} href={`${origin}/#contact`} onTouchEnd={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Contact</ScrollLink>
                         </div>
                     </div>
                 </div>
