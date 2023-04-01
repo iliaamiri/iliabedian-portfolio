@@ -12,7 +12,7 @@ type ScrollLinkProps = AnchorProps & LinkProps & PropsWithChildren;
 const ScrollLink = ({ children, ...props }: ScrollLinkProps) => {
     const router = useRouter();
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        e.preventDefault();
+        // e.preventDefault();
 
         const [href, targetId] = e.currentTarget.href.split("#");
         if (href !== window.location.href) {
