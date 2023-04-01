@@ -15,6 +15,10 @@ module.exports = {
         marqueeSlow: 'marquee 100s linear infinite',
         marquee2: 'marquee2 25s linear infinite',
         marquee2Slow: 'marquee2 100s linear infinite',
+        slideInFromRight: 'slideInFromRight 0.5s ease-in-out',
+        slideOutToRight: 'slideOutToRight 0.5s ease-in-out',
+        fadeIn: 'fadeIn 0.5s ease-in-out',
+        fadeOut: 'fadeOut 0.5s ease-in-out',
       },
       keyframes: {
         marquee: {
@@ -25,6 +29,22 @@ module.exports = {
           '0%': {transform: 'translateX(100%)'},
           '100%': {transform: 'translateX(0%)'},
         },
+        slideInFromRight: {
+          '0%': {transform: 'translateX(100%)'},
+          '100%': {transform: 'translateX(0%)'},
+        },
+        slideOutToRight: {
+          '0%': {transform: 'translateX(0%)'},
+          '100%': {transform: 'translateX(100%)'},
+        },
+        fadeIn: {
+          '0%': {opacity: '0'},
+          '100%': {opacity: '1'},
+        },
+        fadeOut: {
+          '0%': {opacity: '1'},
+          '100%': {opacity: '0'},
+        }
       },
       content: {
         githubIcon: 'url("/assets/icons/github.svg")',

@@ -2,10 +2,10 @@ import {ArtifactModel} from "@/lib/models";
 import {SkillBadgeRow} from "@/components/SkillBadgeRow";
 import {Rowdies, Ubuntu} from "next/font/google";
 import {XSThreeDots} from "@/components/ThreeDots";
-import {ArtifactActionButton} from "@/components/Button";
+import {ArtifactActionButton} from "@/components/Buttons/ArtifactActionButton";
 import {randomIntFromInterval} from "@/lib/utils";
-import Link from "next/link";
 import {AestheticRender} from "@/components/AestheticRender";
+import Link from "next/link";
 
 const ubuntu = Ubuntu({subsets: ['latin'], weight: '500'})
 const rowdiesBold = Rowdies({subsets: ['latin'], weight: '700'})

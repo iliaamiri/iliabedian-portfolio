@@ -1,6 +1,5 @@
 import {Rowdies} from "next/font/google";
 import {ThreeDots} from "@/components/ThreeDots";
-import exp from "constants";
 
 const rowdies = Rowdies({subsets: ['latin'], weight: '300'})
 

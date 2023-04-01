@@ -1,5 +1,7 @@
-**Deploy a .NET app on Railway**
-**Before starting, make sure you have: **
+import {Warning} from '@/components/Markdown/Warning';
+import {Note} from '@/components/Markdown/Note';
+
+## Before starting, make sure you have:
 - Installed .NET 7 sdk.
 - Installed Docker and ran its service.
 - Installed Railway CLI from https://docs.railway.app/develop/cli
@@ -50,27 +52,23 @@ Go to your `Program.cs` at `/MyApp/MyApp/Program.cs`. And, add these two lines b
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8081";
 builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 ```
-:warning:**NOTE**: comment out the line that forces HTTPS redirection. (`app.UseHttpsRedirection();`) in your `Program.cs`.
 
-**2. Railway Moment**
+<Note type='warning'>
+comment out the line that forces HTTPS redirection. (`app.UseHttpsRedirection();`) in your `Program.cs`.
+</Note>
 
-2.0 navigate to `/MyApp` folder in your command line shell.
+## Playing Railway
 
-2.1 run `railway login` and follow the instructions to login on your railway account.
+0. navigate to `/MyApp` folder in your command line shell.
+1. run `railway login` and follow the instructions to login on your railway account.
+2. (optional) run `railway run dotnet run --project ./MyApp` and make sure that your app is running (local)
+3. On your railway, "Start a New Project" and then choose the "Empty project" from the dropdown menu.
+4. Add a Service. and choose "Empty Service".
+5. On you terminal, (staying in the `/MyApp` working directory), run `railway link` and then choose your project that you want to link your .NET app to. (There will be a list of your railway projects by their names.)
+6. Finally, run `railway up` and wait until your deployment builds, and deploys on railway. You can checkout the deployment starting on your Railway project (service) deployment page.
+7. And maybe generate a new domain so that you can access your app via that.
 
-2.2 (optional) run `railway run dotnet run --project ./MyApp` and make sure that your app is running (local)
-
-2.3 On your railway, "Start a New Project" and then choose the "Empty project" from the dropdown menu.
-
-2.4 Add a Service. and choose "Empty Service".
-
-2.5 On you terminal, (staying in the `/MyApp` working directory), run `railway link` and then choose your project that you want to link your .NET app to. (There will be a list of your railway projects by their names.)
-
-2.6 Finally, run `railway up` and wait until your deployment builds, and deploys on railway. You can checkout the deployment starting on your Railway project (service) deployment page.
-
-2.7 And maybe generate a new domain so that you can access your app via that.
-
-**Resources, if you're curious**
+## Resources, if you're curious
 - https://rendle.dev/posts/deploying-to-railway-with-dotnet/
 - https://docs.railway.app/develop/cli
 - https://stackoverflow.com/questions/70502758/how-do-i-inject-herokus-port-value-into-a-dotnet-core-6-0-web-api
@@ -79,7 +77,10 @@ builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 
 ---
 
+<Note type='info'>
 if anyone is having their solution and project in the same folder, here's how your Dockerfile should almost look like:
+</Note>
+
 ```dockerfile
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app

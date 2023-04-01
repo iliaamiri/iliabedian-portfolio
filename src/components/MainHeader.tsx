@@ -1,10 +1,29 @@
+'use client';
 import Image from "next/image";
 import Logo from "../../public/assets/logo/circle-green.svg";
-import {MenuButton} from "@/components/Button";
 import {ThreeDotsBurgerMenu} from "@/components/ThreeDots";
 import Link from "next/link";
+import {useEffect, useState} from "react";
+import { MenuButton } from "./Buttons/MenuButton";
+import {Rowdies} from "next/font/google";
+import ScrollLink from "@/components/ScrollLink";
+
+const rowdies = Rowdies({subsets: ['latin'], weight: '400'})
 
 export function MainHeader({}: {}) {
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isHidden, setIsHidden] = useState(true);
+
+    useEffect(() => {
+        if (isMenuOpen) {
+            setIsHidden(false);
+        } else {
+            setTimeout(() => {
+                setIsHidden(true);
+            }, 450);
+        }
+    }, [isMenuOpen]);
 
     return (
         <nav className={`flex w-full px-10 md:px-40 pt-4 pb-3 justify-between backdrop-blur fixed top-0 z-50 shadow-xl`}>
@@ -15,15 +34,25 @@ export function MainHeader({}: {}) {
             </div>
 
             <div className={`flex justify-center items-center cursor-pointer`}>
-                <ThreeDotsBurgerMenu containerClassName={`lg:hidden flex rotate-[180deg]`} />
-                <div className={`h-full`}>
+                <ThreeDotsBurgerMenu onClick={() => setIsMenuOpen(!isMenuOpen)} containerClassName={`lg:hidden flex rotate-[180deg]`} />
 
+                <div className={`${isMenuOpen ? 'animate-slideInFromRight' : 'animate-slideOutToRight'} ${isHidden ? 'hidden' : ''} z-10 h-[100vh] absolute top-0 right-0 w-8/12 bg-gradient-to-b from-[#000000] via-[#19392A] to-[#2D6A4F] flex justify-center items-center`}>
+                    <div className={`flex flex-row w-10/12`}>
+                        <ThreeDotsBurgerMenu onClick={() => setIsMenuOpen(!isMenuOpen)} containerClassName={`flex justify-center rotate-[270deg]`} />
+                        <div className={`flex flex-col items-center w-full gap-10`}>
+                            <Link href={"/"} onFocus={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Home</Link>
+                            <Link href={"/blog"} onFocus={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Blog</Link>
+                            <ScrollLink scroll={false} href={"#contact"} onFocus={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Contact</ScrollLink>
+                        </div>
+                    </div>
+                </div>
+                <div onClick={() => setIsMenuOpen(!isMenuOpen)} className={`${isMenuOpen ? 'animate-fadeIn' : 'animate-fadeOut'} ${isHidden ? 'hidden' : ''} h-[100vh] fixed top-0 right-0 w-full backdrop-blur-[3px] bg-[#1F4735]/60`}>
                 </div>
             </div>
             <div className={`hidden lg:flex justify-center items-center gap-3`}>
-                <Link href={""}><MenuButton>Back-End</MenuButton></Link>
+                <Link href={"/"}><MenuButton>Home</MenuButton></Link>
                 <Link href={"/blog"}><MenuButton>Blog</MenuButton></Link>
-                <Link href={"#contact"} scroll={false}><MenuButton>Contact</MenuButton></Link>
+                <ScrollLink href={`${process.env.NEXT_PUBLIC_APP_URL}/#contact`}><MenuButton>Contact</MenuButton></ScrollLink>
             </div>
         </nav>
     );

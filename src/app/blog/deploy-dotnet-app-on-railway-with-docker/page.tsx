@@ -1,9 +1,11 @@
+'use client';
 import {BlogPostHeader} from "@/components/StyledHeader";
 import {blogs} from "@/lib/data/blogs";
-import {Ubuntu} from "next/font/google";
+import {Roboto} from "next/font/google";
 import MDXBlogPost from './post.mdx';
+import {code} from "@/lib/code";
 
-const ubuntu = Ubuntu({subsets: ['latin'], weight: '400'})
+const roboto = Roboto({subsets: ['latin'], weight: '400'})
 
 export default function BlogPost() {
     const blog = blogs["deploy-dotnet-app-on-railway-with-docker"];
@@ -12,9 +14,9 @@ export default function BlogPost() {
             <BlogPostHeader>
                 {blog.title}
             </BlogPostHeader>
-            <div className={`flex flex-col items-center justify-center w-full ${ubuntu.className} markdown`} id={'readme'}>
+            <div className={`flex flex-col items-center justify-center w-full ${roboto.className} markdown`} id={'readme'}>
                 <div className={`w-9/12 md:w-7/12 pb-20`}>
-                    <MDXBlogPost />
+                    <MDXBlogPost components={{code}} />
                 </div>
             </div>
         </div>
