@@ -11,13 +11,19 @@ interface Props {
     blog: BlogModel;
 }
 
-export function BlogCard({ blog }: Props) {
+export async function BlogCard({ blog }: Props) {
     return (
         <Link href={`/blog/${blog.slug}`} scroll={false} className={`[&:only-child]:col-start-2 flex md:w-10/12`} >
             <div className={`flex flex-col items-stretch w-full justify-center hover:scale-[1.03] ease-in-out duration-300 cursor-pointer`}>
                 <div
                     className={`flex justify-center rounded-3xl justify-self-center aspect-video bg-no-repeat bg-cover`}>
-                    <Image src={blog.coverImage} alt={''} width={9999999} height={9999999} className={`w-full h-full rounded-3xl`} quality={100} />
+                    <Image
+                        src={blog.coverImage}
+                        alt={blog.title}
+                        width={9999999}
+                        height={9999999}
+                        className={`w-full h-full rounded-3xl`}
+                        quality={100}/>
                 </div>
                 <div
                     className={`relative flex-1 -top-20 flex flex-col text-[#F9F4F1] bg-gradient-to-t from-[#5441FF] via-[#7A6BFF] rounded-b-2xl p-9 pt-20`}>

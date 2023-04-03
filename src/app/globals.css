@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  body::-webkit-scrollbar{
+    display: none;
+  }
+
   .markdown h1 {
     @apply text-5xl font-bold my-10;
   }
