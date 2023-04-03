@@ -11,7 +11,7 @@ interface Props {
     blog: BlogModel;
 }
 
-export async function BlogCard({ blog }: Props) {
+export function BlogCard({ blog }: Props) {
     return (
         <Link href={`/blog/${blog.slug}`} scroll={false} className={`[&:only-child]:col-start-2 flex md:w-10/12`} >
             <div className={`flex flex-col items-stretch w-full justify-center hover:scale-[1.03] ease-in-out duration-300 cursor-pointer`}>
