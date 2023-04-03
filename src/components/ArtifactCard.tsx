@@ -16,7 +16,6 @@ export function ArtifactCard({ artifact }: Props) {
         <Link href={`/artifact-detail/${artifact.slug}#readme`} scroll={false} className={`flex md:w-10/12`} >
             <div className={`flex flex-col items-stretch h-full justify-center hover:scale-[1.03] ease-in-out duration-300 cursor-pointer`}>
                 <div
-                    // style={{ backgroundImage: `url(${artifact.imageUrl})` }}
                     className={`flex justify-center rounded-3xl justify-self-center aspect-video bg-no-repeat bg-cover`}>
                     <Image src={artifact.imageUrl} alt={''} width={9999999} height={9999999} className={`w-full h-full rounded-3xl`} quality={100} />
                 </div>
