@@ -8,7 +8,7 @@ import {code} from "@/lib/code";
 const roboto = Roboto({subsets: ['latin'], weight: '400'})
 
 export default function BlogPost() {
-    const blog = blogs["deploy-dotnet-app-on-railway-with-docker"];
+    const blog = blogs["server-side-events-on-nestjs-emitting-events-to-clients"];
     return (
         <div>
             <BlogPostHeader>

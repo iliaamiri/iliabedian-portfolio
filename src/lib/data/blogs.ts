@@ -10,10 +10,10 @@ export const blogs = {
     },
     'server-side-events-on-nestjs-emitting-events-to-clients': {
         id: 2,
-        title: 'Unlock the Power of Real-Time Communication: Mastering NestJS and Server-Sent Events!',
+        title: 'Utilize Real-Time NestJS using Server-Sent Events',
         slug: 'server-side-events-on-nestjs-emitting-events-to-clients',
-        coverImage: '/assets/blog-covers/server-side-events-on-nestjs-emitting-events-to-clients.svg',
-        publishedAt: new Date("2021-04-04"),
+        coverImage: '/assets/blog-covers/deploy-dotnet-on-railway-using-docker.svg',
+        publishedAt: new Date("2023-04-04"),
         timeToRead: 1,
         tags: ['NestJS', 'Server-Sent Events', 'Real-Time Communication']
     }

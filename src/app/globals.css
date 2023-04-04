@@ -7,6 +7,10 @@
     display: none;
   }
 
+  body {
+    scrollbar-width: none;
+  }
+
   .markdown h1 {
     @apply text-5xl font-bold my-10;
   }
