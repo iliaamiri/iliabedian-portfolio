@@ -1,0 +1,66 @@
+import {Note} from '@/components/Markdown/Note';
+
+In today's fast-paced digital world, real-time communication and data streaming play a crucial role in creating engaging
+and interactive web applications. NestJS, a popular and powerful framework for building efficient, scalable Node.js server-side applications, combined with Server-Sent Events (SSE), can take your web app's real-time capabilities to new heights.
+
+In this article, we will demonstrate how to harness the power of NestJS and SSE to create real-time data streaming
+between a server and clients. You will learn about the key concepts of NestJS and Server-Sent Events, along with a step-by-step guide to setting up a NestJS server and client-side code for seamless data streaming.
+
+Whether you're a seasoned developer looking to expand your skillset or a newcomer to the world of real-time web applications,
+this article will provide you with valuable insights and practical examples to jumpstart your journey into the world of NestJS and SSE.
+
+## Setting up the NestJS server
+
+Before diving into the implementation, let's set up a new NestJS project and install the required dependencies.
+
+### Prerequisites
+
+Ensure you have the following tools installed on your system:
+
+- [Node.js](https://nodejs.org/) (v12 or newer)
+- [npm](https://www.npmjs.com/) (usually bundled with Node.js) or [Yarn](https://yarnpkg.com/)
+
+### Creating a new NestJS project
+
+To create a new NestJS project, first, install the Nest CLI globally on your system by running:
+
+```bash
+npm install -g @nestjs/cli
+```
+
+Next, use the `nest new` command to create a new project. Replace `nestjs-sse-example` with your desired project name:
+
+```bas
+nest new nestjs-sse-example
+```
+
+Follow the prompts, and choose the package manager you prefer (npm or Yarn). The CLI will generate a new NestJS project with the default structure and configuration.
+
+## Installing dependencies
+
+Navigate to the project directory and install the required dependencies:
+
+```bash
+cd nestjs-sse-example
+```
+
+The default NestJS installation already includes the necessary dependencies, such as `@nestjs/core`, `@nestjs/common`,
+and `rxjs`. No additional dependencies are required for this example.
+
+## Starting the development server
+
+To start the development server, run the following command:
+
+```bash
+npm run start:dev
+```
+
+This will start the NestJS development server with hot-reload enabled. You should see the following output indicating that the server is running:
+```bash
+[nestjs] Starting Nest application...
+[nestjs] Nest application successfully started
+```
+
+Now that the NestJS server is set up and running, we can proceed to create the service and controller for managing Server-Sent Events.
+
+
