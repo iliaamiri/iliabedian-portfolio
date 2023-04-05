@@ -5,5 +5,7 @@ export interface BlogModel {
     coverImage: string;
     publishedAt: Date;
     timeToRead: number;
+    backgroundColors: string;
+    shadow: string;
     tags: string[];
 }
