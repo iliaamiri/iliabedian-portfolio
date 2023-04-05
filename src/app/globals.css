@@ -7,6 +7,10 @@
     display: none;
   }
 
+  body {
+    scrollbar-width: none;
+  }
+
   .markdown h1 {
     @apply text-5xl font-bold my-10;
   }
@@ -28,7 +32,7 @@
   }
 
   .markdown li {
-    @apply ml-8 text-xl leading-8 my-3 break-words;
+    @apply ml-8 text-lg leading-8 my-3 break-words;
   }
 
   .markdown ol li {
@@ -40,7 +44,12 @@
   }
 
   .markdown p {
-    @apply mx-4 text-xl leading-8;
+    @apply mx-4 text-lg leading-8;
+  }
+
+  /* Distance between two paragraphs */
+  .markdown p + p {
+    @apply mt-4;
   }
 
   .markdown pre {
@@ -48,7 +57,7 @@
   }
 
   .markdown code:not([class]) {
-    @apply px-1.5 py-0.5 rounded font-mono bg-gray-200 text-gray-700;
+    @apply px-1.5 py-0.5 rounded font-mono text-[#5441FF];
   }
 
   /*.markdown code[class*='language-']:after {*/
@@ -71,6 +80,20 @@
 
   .contactDiamondCube::before {
     @apply absolute z-30 -top-5 -left-4 -rotate-45;
+  }
+
+  /*.fadedImage {*/
+  /*  position:relative;*/
+  /*  -moz-box-shadow: inset 0px -70px 50px -30px transparent;*/
+  /*  -webkit-box-shadow: inset 0px -70px 50px -30px transparent;*/
+  /*  -o-box-shadow: inset 0px -70px 50px -30px transparent;*/
+  /*  box-shadow: inset 0px -70px 50px -30px transparent;*/
+  /*}*/
+  .fadedImage:before,.image:after{
+    content:'';
+    position:absolute;
+    left:5%;
+    opacity:0.5;
   }
 }
 

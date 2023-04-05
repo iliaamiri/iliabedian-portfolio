@@ -18,12 +18,18 @@ export function Note({ children, type = "info" }: NoteProps) {
         type === "info"
             ? "bg-blue-100"
             : type === "warning"
-                ? "bg-yellow-100"
+                ? "bg-yellow-50"
                 : "bg-red-100";
 
+    const borderColor =
+        type === "info"
+            ? "border-l-blue-300"
+            : type === "warning"
+                ? "border-l-yellow-300"
+                : "border-l-red-300";
+
     return (
-        <div className={`flex items-center justify-start gap-2 rounded-md p-4 my-8 ${bgColor}`}>
-            <MdInfo className={`text-2xl ${iconClass}`} />
+        <div className={`flex items-center justify-start gap-2 rounded-md p-4 my-8 border-l-8 ${borderColor} ${bgColor}`}>
             <div className="text-gray-800 break-words w-full">{children}</div>
         </div>
     );
