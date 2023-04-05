@@ -7,7 +7,7 @@ export const blogs = {
         publishedAt: new Date("2023-03-23"),
         timeToRead: 1,
         backgroundColors: 'from-[#5441FF] via-[#7A6BFF] to-[#7A6BFF]',
-        shadow: 'shadow-[inset_0px_-70px_50px_-30px_#7A6BFF]',
+        shadow: 'shadow-[inset_0px_-70px_50px_-70px_#5441FF]',
         tags: ['Railway', '.NET', 'Docker']
     },
     'server-side-events-on-nestjs-emitting-events-to-clients': {
