@@ -25,7 +25,7 @@ export function BlogPostHeader({coverImage, blog, ...otherProps}: {
     }, []);
 
     return (
-        <div className={`-mt-40 flex flex-col w-full items-center`}>
+        <div className={`-mt-20 md:-mt-40 flex flex-col w-full items-center`}>
             <div
                 style={{ backgroundImage: `url(${coverImage})` }}
                 className={`w-full h-[30vw] md:h-[45vw] lg:h-[35vw] xl:h-[27vw] bg-bottom bg-cover`}>
