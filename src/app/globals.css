@@ -44,12 +44,16 @@
   }
 
   .markdown p {
-    @apply mx-4 text-lg leading-8;
+    @apply mx-2 md:mx-4 text-base md:text-lg leading-7;
   }
 
   /* Distance between two paragraphs */
   .markdown p + p {
     @apply mt-4;
+  }
+
+  .markdown img + p, p + img {
+    @apply my-10;
   }
 
   .markdown pre {

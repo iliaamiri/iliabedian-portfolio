@@ -39,8 +39,7 @@ export function BlogCard({ blog }: Props) {
                             </span>
                         </div>
                     </div>
-                    <div className={` relative bottom-0 rounded-b-xl bg-[url('/assets/lines.svg')] bg-left-bottom h-14`}>
-                    </div>
+                    {/*<div className={` relative bottom-0 rounded-b-xl bg-[url('/assets/lines.svg')] bg-left-bottom h-14`}></div>*/}
                 </div>
             </div>
         </Link>
