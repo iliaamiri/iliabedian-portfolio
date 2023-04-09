@@ -1,4 +1,6 @@
-export const blogs = {
+import {BlogModel} from "@/lib/models";
+
+export const blogs: Record<string, BlogModel> = {
     'deploy-dotnet-app-on-railway-with-docker': {
         id: 1,
         title: 'How to Deploy your .NET App on Railway using Docker',
