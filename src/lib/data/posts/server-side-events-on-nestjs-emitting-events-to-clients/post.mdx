@@ -11,7 +11,7 @@ Unlike WebSockets, SSE is a unidirectional communication protocol. This means th
 but the client cannot send data back to the server. This is a great solution for use cases where the client only needs to receive some
 data from the server, but not send any data back.
 
-<Image src={Image_RepOfSSE} width={900} height={200} className='w-full' />
+<img src={Image_RepOfSSE.src} width={900} height={200} className='w-full' />
 
 SSE is a part of the HTML5 specification and is supported by all modern browsers. It is also supported by Node.js, which makes it a great
 solution for building real-time applications with NestJS.
@@ -235,7 +235,7 @@ Server accessible on http://127.0.0.1:8888
 
 Now, open [http://127.0.0.1:8888](http://127.0.0.1:8888) in your browser and you should see the following page:
 
-<Image src={Image_Result} width={900} height={200} className='w-full' />
+<img src={Image_Result.src} width={900} height={200} className='w-full' />
 
 Congratulations! You have successfully created an SSE endpoint in your NestJS application. You can now trigger the
 `sse.event` event from anywhere in the application and the client will receive the data.
