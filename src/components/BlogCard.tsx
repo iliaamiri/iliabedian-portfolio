@@ -2,7 +2,6 @@ import {BlogModel} from "@/lib/models";
 import {Roboto, Rowdies, Ubuntu} from "next/font/google";
 import Link from "next/link";
 import { XSThreeDots } from "./ThreeDots";
-import Image from "next/image";
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: '500' })
 const rowdiesBold = Rowdies({ subsets: ['latin'], weight: '300' })
@@ -17,7 +16,7 @@ export function BlogCard({ blog }: Props) {
         <Link href={`/blog/${blog.slug}`} scroll={false} className={`[&:only-child]:col-start-2 flex md:w-10/12`} >
             <div className={`flex flex-col items-stretch w-full justify-center hover:scale-[1.03] ease-in-out duration-300 cursor-pointer shadow-2xl rounded-b-2xl`}>
                 <div
-                    style={{ backgroundImage: `url(${blog.coverImage})` }}
+                    style={{ backgroundImage: `url(/assets/blogs/${blog.slug}/card-cover.jpg)` }}
                     className={`fadedImage ${blog.shadow} flex justify-center rounded-t-3xl justify-self-center aspect-video bg-no-repeat bg-cover`}>
                     {/*<Image src={blog.coverImage} alt={blog.title} width={9999999} height={9999999} className={`w-full h-full rounded-3xl`} quality={100}/>*/}
                 </div>
