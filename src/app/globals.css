@@ -18,7 +18,7 @@
     @apply text-3xl font-bold my-8;
   }
   .markdown h3 {
-    @apply text-2xl font-bold my-3;
+    @apply text-2xl font-bold my-3 ml-4;
   }
   .markdown h4 {
     @apply text-xl font-bold my-3;
@@ -62,6 +62,13 @@
 
   .markdown code:not([class]) {
     @apply px-1.5 py-0.5 rounded font-mono text-[1.1rem] text-[#5441FF];
+  }
+
+  .markdown blockquote {
+    @apply font-semibold text-gray-900;
+  }
+  .markdown blockquote p {
+    @apply text-2xl mb-4;
   }
 
   /*.markdown code[class*='language-']:after {*/
