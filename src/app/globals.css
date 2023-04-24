@@ -32,7 +32,7 @@
   }
 
   .markdown li {
-    @apply ml-8 text-lg leading-8 my-3 break-words;
+    @apply ml-8 text-lg leading-8 break-words;
   }
 
   .markdown ol li {
@@ -61,7 +61,7 @@
   }
 
   .markdown code:not([class]) {
-    @apply px-1.5 py-0.5 rounded font-mono text-[#5441FF];
+    @apply px-1.5 py-0.5 rounded font-mono text-[1.1rem] text-[#5441FF];
   }
 
   /*.markdown code[class*='language-']:after {*/

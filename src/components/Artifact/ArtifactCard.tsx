@@ -1,20 +1,15 @@
 import { ArtifactModel } from "@/lib/models";
 import { Rowdies, Ubuntu } from "next/font/google";
 import Link from "next/link";
-import { XSThreeDots } from "./ThreeDots";
-import Image from "next/image";
+import { XSThreeDots } from "../ThreeDots";
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: '500' })
 const rowdiesBold = Rowdies({ subsets: ['latin'], weight: '700' })
 
-interface Props {
-    artifact: ArtifactModel;
-}
-
-export function ArtifactCard({ artifact }: Props) {
+export function ArtifactCard({ artifact }: { artifact: ArtifactModel }) {
     return (
         <Link href={`/artifact-detail/${artifact.slug}#readme`} scroll={false} className={`flex md:w-10/12`} >
-            <div className={`flex flex-col items-stretch h-full justify-center hover:scale-[1.03] ease-in-out duration-300 cursor-pointer`}>
+            <div className={`flex flex-col items-stretch h-full justify-center hover:scale-[1.03] ease-in-out duration-300 cursor-pointer grayscale hover:grayscale-0`}>
                 <div
                     style={{ backgroundImage: `url(${artifact.imageUrl})` }}
                     className={`flex justify-center rounded-3xl justify-self-center aspect-video bg-no-repeat bg-cover`}>

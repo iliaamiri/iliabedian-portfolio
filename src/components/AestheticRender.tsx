@@ -13,7 +13,7 @@ export const AestheticRender = (seed: number = 10, speed: 'slow' | 'fast' = 'fas
         render.push(
             <div
                 style={{
-                    backgroundColor: `#${i % rand == 0 ? '5441FF' : (i % (rand + 1) ? '52B788' : '22246A')}`,
+                    backgroundColor: `#${i % rand == 0 ? '5441FF' : (i % (rand + 1) ? '52B788' : '5441FF')}`,
                     width: `${randomIntFromInterval(30, 150)}px`,
                 }}
                 className={`w-fit h-[0.6rem] shrink-0 rounded-full`}></div>

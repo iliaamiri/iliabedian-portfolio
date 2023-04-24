@@ -1,11 +1,10 @@
-import {Inter, Rowdies, Ubuntu} from 'next/font/google'
+import {Inter, Rowdies} from 'next/font/google'
 import {StyledHeader} from "@/components/StyledHeader";
-import {ArtifactItem} from "@/components/ArtifactItem";
 import {artifacts} from "@/lib/data/artifacts";
 import {Contact} from "@/app/contact";
 import {DiamondCube} from "@/components/DiamondCube";
 import Link from "next/link";
-import { ArtifactCard } from '@/components/ArtifactCard';
+import { ArtifactCard } from '@/components/Artifact/ArtifactCard';
 import {AestheticRender} from "@/components/AestheticRender";
 
 const inter = Inter({subsets: ['latin']})

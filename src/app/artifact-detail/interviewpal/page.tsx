@@ -1,5 +1,5 @@
 import {StyledHeader} from "@/components/StyledHeader";
-import {ArtifactItem} from "@/components/ArtifactItem";
+import {ArtifactItem} from "@/components/Artifact/ArtifactItem";
 import {artifacts} from "@/lib/data/artifacts";
 import {Roboto} from "next/font/google";
 import {Mdx} from "@/app/artifact-detail/interviewpal/mdx";
