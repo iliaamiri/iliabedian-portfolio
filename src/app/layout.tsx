@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import {MainHeader} from "@/components/MainHeader";
 import Script from "next/script";
+import {Contact} from "@/app/contact";
 
 export const metadata: Metadata = {
     title: 'Ilia Abedianamiri',
@@ -40,6 +41,8 @@ export default function RootLayout({
                 <MainHeader />
                 <div className={`pt-40`}>
                     {children}
+
+                    <Contact />
                 </div>
             </body>
         </html>
