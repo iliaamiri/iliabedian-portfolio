@@ -12,7 +12,7 @@ const rowdiesBold = Rowdies({subsets: ['latin'], weight: '700'})
 export function ArtifactItemOnLeft({artifact}: { artifact: ArtifactModel }) {
     return (
         <div
-            className={`flex flex-col-reverse md:flex-row w-full max:h-[1100px] md:max-h-[708px] overflow-hidden justify-end`}>
+            className={`flex flex-col-reverse md:flex-row w-full justify-end`}>
 
             {/* diamond (rotated div) */}
             <div className={`flex flex-row items-center w-full md:w-5/12 max-h-[580px] justify-center pt-5 md:pt-60`}>

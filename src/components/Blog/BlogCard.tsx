@@ -1,7 +1,7 @@
 import {BlogModel} from "@/lib/models";
 import {Roboto, Rowdies, Ubuntu} from "next/font/google";
 import Link from "next/link";
-import { XSThreeDots } from "./ThreeDots";
+import { XSThreeDots } from "../ThreeDots";
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: '500' })
 const rowdiesBold = Rowdies({ subsets: ['latin'], weight: '300' })

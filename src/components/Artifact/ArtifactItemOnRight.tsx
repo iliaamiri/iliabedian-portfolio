@@ -11,7 +11,7 @@ const rowdiesBold = Rowdies({subsets: ['latin'], weight: '700'})
 
 export function ArtifactItemOnRight({artifact}: { artifact: ArtifactModel }) {
     return (
-        <div className={`flex flex-col md:flex-row w-full max:h-[1100px] md:max-h-[708px] overflow-hidden justify-end`}>
+        <div className={`flex flex-col md:flex-row w-full justify-end`}>
 
             <div className={`flex-col flex justify-start items-start w-full md:w-7/12 pt-10`}>
                 <Link href={`/artifact-detail/${artifact.slug}#readme`} scroll={false}>

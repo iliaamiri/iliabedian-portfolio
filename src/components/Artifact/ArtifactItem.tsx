@@ -3,6 +3,7 @@ import {randomIntFromInterval} from "@/lib/utils";
 import {ArtifactItemOnRight} from "@/components/Artifact/ArtifactItemOnRight";
 import {ArtifactItemOnLeft} from "@/components/Artifact/ArtifactItemOnLeft";
 import {Suspense} from "react";
+import {Loading} from "@/components/Loading";
 
 export function ArtifactItem({artifact, isOnRight = true}: { artifact: ArtifactModel, isOnRight: boolean }) {
 
@@ -10,7 +11,7 @@ export function ArtifactItem({artifact, isOnRight = true}: { artifact: ArtifactM
     const secondSeparatorWidth = 100 - firstSeparatorWidth;
 
     return (
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<Loading />}>
             {isOnRight ? ArtifactItemOnRight({artifact}) : ArtifactItemOnLeft({artifact})}
             <div className={`w-full flex flex-row gap-6 pb-5 px-5`}>
                 <div style={{

@@ -1,4 +1,4 @@
-import {BlogCard} from "@/components/BlogCard";
+import {BlogCard} from "@/components/Blog/BlogCard";
 import {blogs} from "@/lib/data/blogs";
 import {StyledHeader} from "@/components/StyledHeader";
 import {Metadata} from "next";
@@ -16,7 +16,7 @@ export function generateMetadata(): Metadata {
 
 const BlogCards = Object.values(blogs)
     .sort((b1, b2) => b2.id - b1.id)
-    .map(blog => <BlogCard blog={blog} key={blog.slug} />);
+    .map(blog => <BlogCard blog={blog} key={'blogCard' + blog.slug} />);
 
 export default function BlogIndex() {
     return (

@@ -1,7 +1,7 @@
 'use client';
 import {useParams} from "next/navigation";
 import {code} from "@/lib/code";
-import {BlogPageWrapper} from "@/components/BlogPageWrapper";
+import {BlogPageWrapper} from "@/components/Blog/BlogPageWrapper";
 import {getBlog} from "@/app/blog/[slug]/helpers";
 import dynamic from "next/dynamic";
 import {DynamicOptions} from "next/dist/shared/lib/dynamic";

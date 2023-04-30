@@ -1,6 +1,6 @@
 import {BlogModel} from "@/lib/models";
 import {PropsWithChildren} from "react";
-import {BlogPostHeader} from "@/components/BlogPostHeader";
+import {BlogPostHeader} from "@/components/Blog/BlogPostHeader";
 import {Roboto} from "next/font/google";
 
 const roboto = Roboto({subsets: ['latin'], weight: '400'});

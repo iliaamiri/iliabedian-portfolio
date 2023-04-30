@@ -11,9 +11,9 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        marquee: 'marquee 25s linear infinite',
+        marquee: 'marquee 15s linear infinite',
         marqueeSlow: 'marquee 100s linear infinite',
-        marquee2: 'marquee2 25s linear infinite',
+        marquee2: 'marquee2 15s linear infinite',
         marquee2Slow: 'marquee2 100s linear infinite',
         slideInFromRight: 'slideInFromRight 0.5s ease-in-out',
         slideOutToRight: 'slideOutToRight 0.5s ease-in-out',
