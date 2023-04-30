@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import {getBlog} from "@/app/blog/[slug]/helpers";
 import {Suspense} from "react";
-import {Contact} from "@/app/contact";
+import {Loading} from "@/components/Loading";
 
 export function generateMetadata({ params }: { params: { slug: string }}): Metadata {
     const blog = getBlog(params.slug);
@@ -30,7 +30,7 @@ export function generateMetadata({ params }: { params: { slug: string }}): Metad
 
 export default function Layout({children}: { children: React.ReactNode }) {
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
             {children}
         </Suspense>
     )
