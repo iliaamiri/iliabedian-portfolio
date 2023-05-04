@@ -15,10 +15,10 @@ export default function Home() {
         <div>
             <div className={`${rowdies.className} flex flex-col w-full justify-center items-center gap-5 text-center px-5`}>
                 <h1 className={`text-5xl text-[3.0rem] md:text-[5.252rem]`}>
-                    E<span className={`text-[#2D6A4F]`}>ili</span>y<span className={`text-[#2D6A4F]`}>a</span> Abedianamiri
+                    E<span className={`text-primaryDawn`}>ili</span>y<span className={`text-primaryDawn`}>a</span> Abedianamiri
                 </h1>
                 <p className={'md:w-5/12'}>
-                    <span className={`text-[#2D6A4F]`}>Full-stack developer</span>, <span className={`text-[#2D6A4F]`}>software engineer</span>, and <span className={`text-[#2D6A4F]`}>researcher</span> learning new things and building cool projects. Welcome to my portfolio.
+                    <span className={`text-primaryDawn`}>Full-stack developer</span>, <span className={`text-primaryDawn`}>software engineer</span>, and <span className={`text-primaryDawn`}>researcher</span> learning new things and building cool projects. Welcome to my portfolio.
                 </p>
             </div>
 

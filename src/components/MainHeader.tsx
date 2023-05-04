@@ -1,6 +1,6 @@
 'use client';
 import Image from "next/image";
-import Logo from "../../public/assets/logo/circle-green.svg";
+import Logo from "../../public/assets/logo/circle-new-green.svg";
 import {ThreeDotsBurgerMenu} from "@/components/ThreeDots";
 import Link from "next/link";
 import {useEffect, useState} from "react";
