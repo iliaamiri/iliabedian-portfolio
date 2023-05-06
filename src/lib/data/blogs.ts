@@ -27,19 +27,6 @@ export const blogs: Record<string, BlogModel> = {
         keywords: ['Server-Sent Events', 'SSE', 'Real-Time Communication', 'WebSockets', 'SSE with NestJS'],
         tags: ['NestJS', 'Server-Sent Events', 'Real-Time Communication', 'WebSockets', 'SSE with NestJS']
     },
-    // 'intro-to-nestjs-creating-a-simple-rest-api': {
-    //     id: 3,
-    //     title: 'Introduction to NestJS: Creating a Simple REST API',
-    //     description: 'In this tutorial, we will be creating a simple REST API using NestJS. We will be using the NestJS CLI to generate a new\n' +
-    //         'project and then we will be adding a few endpoints to it.',
-    //     slug: 'intro-to-nestjs-creating-a-simple-rest-api',
-    //     publishedAt: new Date("2023-04-11"),
-    //     timeToRead: 4,
-    //     backgroundColors: 'from-[#860924] via-[#EF1645] to-[#FF5E5E]',
-    //     shadow: 'shadow-[inset_0px_-70px_50px_-30px_#860924]',
-    //     keywords: ['NestJS', 'REST API', 'NestJS CLI', 'NestJS REST API'],
-    //     tags: ['NestJS', 'REST API', 'NestJS CLI', 'NestJS REST API']
-    // },
     'deploy-vanilla-php-on-railway': {
         id: 4,
         title: 'How to Deploy a Vanilla PHP project on Railway',
@@ -52,5 +39,18 @@ export const blogs: Record<string, BlogModel> = {
         shadow: 'shadow-[inset_0px_-70px_50px_-70px_#a3afe4]',
         keywords: ['How to deploy PHP on Railway', 'Deploy PHP on Railway', 'Deploy PHP on Railway using Railway CLI'],
         tags: ['Railway', 'PHP', 'Vanilla PHP']
+    },
+    'best-way-to-setup-debugger-in-webstorm-typescript-projects': {
+        id: 5,
+        title: 'Best Way to Setup debugger in WebStorm for TypeScript Projects',
+        description: 'Whether to use a debugger or not has probably been one of the most spicy topics of software development. When I\n' +
+            'tell some people that why they should use a debugger, they take it as a personal insult. As if I insulted their mother.',
+        slug: 'best-way-to-setup-debugger-in-webstorm-typescript-projects',
+        publishedAt: new Date("2023-05-05"),
+        timeToRead: 10,
+        backgroundColors: 'from-[#7D8800] via-[#00288D] to-[#06085F]',
+        shadow: 'shadow-[inset_0px_-70px_50px_-70px_#00288D]',
+        keywords: ['Setup Debugger', 'TypeScript Debugger', 'WebStorm'],
+        tags: ['WebStorm', 'Debugger', 'TypeScript']
     }
 };

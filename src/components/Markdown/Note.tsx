@@ -1,5 +1,4 @@
 import React from "react";
-import { MdInfo } from "react-icons/md";
 
 interface NoteProps {
     children: React.ReactNode;

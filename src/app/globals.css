@@ -53,7 +53,7 @@
   }
 
   .markdown img + p, p + img {
-    @apply my-10;
+    @apply my-5 mx-5;
   }
 
   .markdown pre {
