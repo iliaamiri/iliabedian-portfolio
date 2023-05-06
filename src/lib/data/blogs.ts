@@ -47,7 +47,7 @@ export const blogs: Record<string, BlogModel> = {
             'tell some people that why they should use a debugger, they take it as a personal insult. As if I insulted their mother.',
         slug: 'best-way-to-setup-debugger-in-webstorm-typescript-projects',
         publishedAt: new Date("2023-05-05"),
-        timeToRead: 10,
+        timeToRead: 5,
         backgroundColors: 'from-[#7D8800] via-[#00288D] to-[#06085F]',
         shadow: 'shadow-[inset_0px_-70px_50px_-70px_#00288D]',
         keywords: ['Setup Debugger', 'TypeScript Debugger', 'WebStorm'],
