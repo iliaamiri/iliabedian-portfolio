@@ -8,10 +8,9 @@ import { MenuButton } from "./Buttons/MenuButton";
 import {Rowdies} from "next/font/google";
 import ScrollLink from "@/components/ScrollLink";
 
-const rowdies = Rowdies({subsets: ['latin'], weight: '400'})
+const rowdies = Rowdies({subsets: ['latin'], weight: '400'});
 
 export function MainHeader({}: {}) {
-
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isHidden, setIsHidden] = useState(true);
     const [origin, setOrigin] = useState<string>('');
@@ -30,6 +29,8 @@ export function MainHeader({}: {}) {
         }
     }, [isMenuOpen]);
 
+    const handleTouchEndMenuItem = () => setIsMenuOpen(false);
+
     return (
         <nav className={`flex w-full px-10 md:px-10 xl:px-52 pt-4 pb-3 justify-between backdrop-blur-sm fixed top-0 z-50 shadow-xl`}>
             <div className={`h-14 w-14 md:h-20 md:w-20 relative`}>
@@ -45,8 +46,9 @@ export function MainHeader({}: {}) {
                     <div className={`flex flex-row w-10/12`}>
                         <ThreeDotsBurgerMenu onClick={() => setIsMenuOpen(!isMenuOpen)} containerClassName={`flex justify-center rotate-[270deg]`} />
                         <div className={`flex flex-col items-center w-full gap-10`}>
-                            <Link href={"/"} onTouchEnd={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Home</Link>
-                            <Link href={"/blog"} onTouchEnd={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Blog</Link>
+                            <Link href={"/"} onTouchEnd={handleTouchEndMenuItem} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Home</Link>
+                            <Link href={"/blog"} onTouchEnd={handleTouchEndMenuItem} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Blog</Link>
+                            <Link href={"/about"} onTouchEnd={handleTouchEndMenuItem} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>About</Link>
                             <ScrollLink scroll={false} href={`${origin}/#contact`} onTouchEnd={() => setIsMenuOpen(false)} className={`${rowdies.className} text-white text-2xl hover:text-[#5441FF] transition ease-in-out`}>Contact</ScrollLink>
                         </div>
                     </div>
@@ -57,6 +59,7 @@ export function MainHeader({}: {}) {
             <div className={`hidden lg:flex justify-center items-center gap-3`}>
                 <Link href={"/"}><MenuButton>Home</MenuButton></Link>
                 <Link href={"/blog"}><MenuButton>Blog</MenuButton></Link>
+                <Link href={"/about"}><MenuButton>About</MenuButton></Link>
                 <ScrollLink href={`${origin}/#contact`}><MenuButton>Contact</MenuButton></ScrollLink>
             </div>
         </nav>

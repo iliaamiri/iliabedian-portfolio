@@ -12,7 +12,7 @@ const rowdies = Rowdies({subsets: ['latin'], weight: '300'})
 const ubuntu = Ubuntu({subsets: ['latin'], weight: '500'})
 const roboto = Roboto({subsets: ['latin'], weight: '400'})
 
-export function BlogPostHeader({coverImage, blog, ...otherProps}: {
+export function BlogPostHero({coverImage, blog, ...otherProps}: {
     children?: any;
     id?: string;
     coverImage?: any;

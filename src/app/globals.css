@@ -65,10 +65,10 @@
   }
 
   .markdown blockquote {
-    @apply font-semibold text-gray-900;
+    @apply font-semibold text-gray-900 rounded-lg shadow-xl border-t-2 border-blue-600 p-2 my-4 mx-3;
   }
   .markdown blockquote p {
-    @apply text-2xl mb-4;
+    @apply text-xl;
   }
 
   /*.markdown code[class*='language-']:after {*/
