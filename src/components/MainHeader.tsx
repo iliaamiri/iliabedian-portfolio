@@ -32,7 +32,7 @@ export function MainHeader({}: {}) {
     const handleTouchEndMenuItem = () => setIsMenuOpen(false);
 
     return (
-        <nav className={`flex w-full px-10 md:px-10 xl:px-52 pt-4 pb-3 justify-between backdrop-blur-sm fixed top-0 z-50 shadow-xl`}>
+        <nav className={`flex w-full px-5 md:px-10 xl:px-52 pt-4 pb-3 justify-between backdrop-blur-sm fixed top-0 z-50 shadow-xl`}>
             <div className={`h-14 w-14 md:h-20 md:w-20 relative`}>
                 <Link href={'/'} >
                     <Image src={Logo} alt={'Main Logo in Header navbar'}/>
