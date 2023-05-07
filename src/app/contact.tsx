@@ -20,8 +20,8 @@ export function Contact() {
                 <Link className={'mailtoui'} href="mailto:iliaabedianamiri@gmail.com">
                     <DiamondCube text={'Email Me'} containerClassName={`grayscale hover:grayscale-0 contactDiamondCube bg-gradient-to-br from-[#A198EE] via-[#2D6A4F] to-[#52B788] before:w-10 cursor-pointer`} />
                 </Link>
-                <Link href={'tel:+17788627477'} >
-                    <DiamondCube text={'Call Me'} containerClassName={`grayscale hover:grayscale-0 contactDiamondCube bg-gradient-to-br from-[#22246A] via-[#2D6A4F] to-[#52B788] cursor-pointer`} />
+                <Link href={''} className={'opacity-0'}>
+                    <DiamondCube text={'YouTube'} containerClassName={`grayscale hover:grayscale-0 contactDiamondCube bg-gradient-to-br from-[#22246A] via-[#2D6A4F] to-[#52B788] cursor-pointer`} />
                 </Link>
             </div>
             <Script async={true} src={'https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js'} />
