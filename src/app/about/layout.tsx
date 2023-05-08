@@ -1,4 +1,5 @@
 import {Metadata} from "next";
+import {PropsWithChildren} from "react";
 
 export const metadata: Metadata = {
     title: 'About Me',
@@ -9,8 +10,6 @@ export const metadata: Metadata = {
     keywords: ['eiliya abedianamiri', 'ilia abedianamiri', 'abedian', 'about me', 'developer', 'software engineer'],
 }
 
-export default function Layout({children}: { children: React.ReactNode }) {
-    return (
-        {children}
-    )
+export default function Layout({children}: PropsWithChildren) {
+    return children
 }
