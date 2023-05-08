@@ -32,7 +32,7 @@ export function SkillBadge({technology}: { technology: TechnologyModel}) {
             <span className={`px-5 ${ubuntu.className} whitespace-nowrap`}>{technology.skillName}</span>
 
             <div
-                className={`bg-skillConfidenceDawn h-[0.3rem] w-[${technology.confidenceLevel}%] rounded mt-1 group-hover:bg-[#5441FF] ease-in-out duration-300`}></div>
+                className={`bg-skillConfidenceDawn h-[0.3rem] w-[${technology.confidenceLevel}%] rounded mt-1 group-hover:bg-secondaryDawn ease-in-out duration-300`}></div>
         </div>
     );
 }

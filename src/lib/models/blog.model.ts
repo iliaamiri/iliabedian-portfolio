@@ -6,6 +6,7 @@ export interface BlogModel {
     publishedAt: Date;
     timeToRead: number;
     backgroundColors: string;
+    placeholderColors: string[];
     shadow: string;
     keywords: string[];
     tags: string[];

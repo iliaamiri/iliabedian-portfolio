@@ -29,9 +29,8 @@ export function BlogPostHero({coverImage, blog, ...otherProps}: {
     return (
         <div className={`-mt-20 md:-mt-40 flex flex-col w-full items-center`}>
             <div
-                style={{backgroundImage: `url(${coverImage})`}}
-                className={`w-full h-[30vw] md:h-[45vw] lg:h-[35vw] xl:h-[27vw] bg-bottom bg-cover`}>
-                {/*<Image src={coverImage} alt={'blog cover'} width={9999999} height={100} className={`w-full h-[50vw] md:h-auto`} quality={100}/>*/}
+                style={{backgroundImage: `url(${coverImage}), linear-gradient(to bottom, ${blog.placeholderColors[0]} 0%, ${blog.placeholderColors[1]} 100%)`}}
+                className={`w-full h-[30vw] md:h-[45vw] lg:h-[35vw] xl:h-[27vw] bg-bottom bg-cover bg-gradient-to-r ${blog.backgroundColors}`}>
             </div>
             <div className={`-mt-5 md:-mt-20 w-11/12 md:w-9/12`}>
                 <h1 className={`${rowdies.className} bg-backgroundDawn px-3 md:px-10 pt-5 md:pt-10 rounded-t-2xl text-4xl md:text-5xl lg:text-[5.252rem]`} {...otherProps} />

@@ -9,7 +9,8 @@ export const blogs: Record<string, BlogModel> = {
         slug: 'deploy-dotnet-app-on-railway-with-docker',
         publishedAt: new Date("2023-03-23"),
         timeToRead: 2,
-        backgroundColors: 'from-[#5441FF] via-[#7A6BFF] to-[#7A6BFF]',
+        backgroundColors: 'from-secondaryDawn via-[#7A6BFF] to-[#7A6BFF]',
+        placeholderColors: ['#5441FF', '#7A6BFF'],
         shadow: 'shadow-[inset_0px_-70px_50px_-70px_#5441FF]',
         keywords: ['How to deploy .NET app on Railway', 'Deploy .NET on Railway', 'Deploy .NET on Railway using Docker'],
         tags: ['Railway', 'Docker', '.NET']
@@ -23,6 +24,7 @@ export const blogs: Record<string, BlogModel> = {
         publishedAt: new Date("2023-04-04"),
         timeToRead: 8,
         backgroundColors: 'from-[#860924] via-[#EF1645] to-[#FF5E5E]',
+        placeholderColors: ['#860924', '#FF5E5E'],
         shadow: 'shadow-[inset_0px_-70px_50px_-30px_#860924]',
         keywords: ['Server-Sent Events', 'SSE', 'Real-Time Communication', 'WebSockets', 'SSE with NestJS'],
         tags: ['NestJS', 'Server-Sent Events', 'Real-Time Communication', 'WebSockets', 'SSE with NestJS']
@@ -36,6 +38,7 @@ export const blogs: Record<string, BlogModel> = {
         publishedAt: new Date("2023-04-22"),
         timeToRead: 8,
         backgroundColors: 'from-[#4f5b93] via-[#4f5b93] to-[#8892be]',
+        placeholderColors: ['#4f5b93', '#8892be'],
         shadow: 'shadow-[inset_0px_-70px_50px_-70px_#a3afe4]',
         keywords: ['How to deploy PHP on Railway', 'Deploy PHP on Railway', 'Deploy PHP on Railway using Railway CLI'],
         tags: ['Railway', 'PHP', 'Vanilla PHP']
@@ -49,6 +52,7 @@ export const blogs: Record<string, BlogModel> = {
         publishedAt: new Date("2023-05-05"),
         timeToRead: 10,
         backgroundColors: 'from-[#7D8800] via-[#00288D] to-[#06085F]',
+        placeholderColors: ['#7D8800', '#06085F'],
         shadow: 'shadow-[inset_0px_-70px_50px_-70px_#00288D]',
         keywords: ['Setup Debugger', 'TypeScript Debugger', 'WebStorm'],
         tags: ['WebStorm', 'Debugger', 'TypeScript']

@@ -21,7 +21,7 @@ export function FancierSyntaxHighlighter({className, language, ...props}: any) {
 
     return (
         <div className={`relative`}>
-                <span onClick={handleCopy}  title={copied ? 'copied' : 'copy snippet'} className={`absolute -top-4 md:top-1 -right-4 md:right-1 bg-[#6C5CFF] md:bg-transparent text-white px-2 py-1 rounded-full hover:bg-[#5441FF] cursor-pointer transition-all ease-in-out duration-300`}>
+                <span onClick={handleCopy}  title={copied ? 'copied' : 'copy snippet'} className={`absolute -top-4 md:top-1 -right-4 md:right-1 bg-[#6C5CFF] md:bg-transparent text-white px-2 py-1 rounded-full hover:bg-secondaryDawn cursor-pointer transition-all ease-in-out duration-300`}>
                     {copied
                         ? <img src={'/assets/icons/checkmark-svgrepo-com.svg'} alt={'✅'} className={`w-4 h-4`}/>
                         : <img src={'/assets/icons/copy-svgrepo-com-white.svg'} alt={'📝'} className={`w-4 h-4`} />}

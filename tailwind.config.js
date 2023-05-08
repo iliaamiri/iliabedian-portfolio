@@ -57,7 +57,9 @@ module.exports = {
         primaryDawn: '#52B788',
         skillConfidenceDawn: '#52B788',
 
-        idk: '#3B8178',
+        secondaryDawn: '#5441FF',
+
+        tertiaryDawn: '#3B8178',
 
         backgroundDawn: '#F9F4F1',
       },

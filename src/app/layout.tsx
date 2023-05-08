@@ -5,13 +5,13 @@ import Script from "next/script";
 import {Contact} from "@/app/contact";
 
 export const metadata: Metadata = {
-    title: 'Ilia Abedianamiri',
+    title: 'Eiliya Abedianamiri',
     authors: {
         name: 'Eiliya Abedianamiri',
         url: 'https://iliaabedian.com',
     },
     applicationName: "Ilia Abedian's Portfolio and Blog",
-    keywords: ['ilia', 'eiliya', 'abedianamiri', 'abedian', 'portfolio', 'blog', 'developer', 'software engineer'],
+    keywords: ['eiliya abedianamiri', 'ilia abedianamiri', 'abedian', 'portfolio', 'blog', 'developer', 'software engineer'],
     description: 'Full-stack developer, software engineer, and researcher learning new things and building cool projects. Welcome to my portfolio.',
     icons: {
         icon: '/assets/logo/circle-cream.svg',

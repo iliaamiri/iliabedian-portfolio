@@ -1,7 +1,9 @@
 import { ArtifactModel } from "@/lib/models";
 import { Rowdies, Ubuntu } from "next/font/google";
 import Link from "next/link";
+import Image from "next/image";
 import { XSThreeDots } from "../ThreeDots";
+import {placeholdersBase64} from "@/lib/utils";
 
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: '500' })
 const rowdiesBold = Rowdies({ subsets: ['latin'], weight: '700' })
@@ -11,9 +13,14 @@ export function ArtifactCard({ artifact }: { artifact: ArtifactModel }) {
         <Link href={`/artifact-detail/${artifact.slug}#readme`} scroll={false} className={`flex md:w-10/12`} >
             <div className={`flex flex-col items-stretch h-full justify-center hover:scale-[1.03] ease-in-out duration-300 cursor-pointer grayscale hover:grayscale-0`}>
                 <div
-                    style={{ backgroundImage: `url(${artifact.imageUrl})` }}
+                    // style={{ backgroundImage: `url(${artifact.imageUrl})` }}
                     className={`flex justify-center rounded-3xl justify-self-center aspect-video bg-no-repeat bg-cover`}>
-                    {/*<Image src={artifact.imageUrl} alt={artifact.summaryText} width={9999999} height={9999999} className={`w-full h-full rounded-3xl`} quality={100} />*/}
+                    <Image src={artifact.imageUrl}
+                           alt={artifact.summaryText}
+                           width={400} height={300}
+                           placeholder={'blur'}
+                           blurDataURL={"data:image/png;base64," + placeholdersBase64.green}
+                           className={`w-full h-full rounded-3xl`} quality={100} />
                 </div>
                 <div
                     className={`relative flex-1 -top-20 flex flex-col text-[#F9F4F1] bg-gradient-to-t from-[#0A0A0A] via-[${artifact.primaryThemeColor}] rounded-b-2xl p-9 pt-20`}>
