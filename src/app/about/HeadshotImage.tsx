@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
-import {useEffect, useState} from "react";
 import ImageSrc from './about-me-headshot.jpg';
+import {useResponsiveImage} from "@/lib/hooks/useResponsiveImage";
 
 const getNewSize = (width: number) => {
     if (width > 765) {
@@ -12,22 +12,7 @@ const getNewSize = (width: number) => {
 };
 
 export function HeadshotImage() {
-    const [imageSize, setImageSize] = useState<{ h: number, w: number }>(
-        global.window !== undefined ? getNewSize(window.innerWidth) : { h: 300, w: 300 });
-
-    useEffect(() => {
-        const resizeHandler = (e: UIEvent) => {
-            const newWindow = e.target as Window;
-            if (!newWindow) return;
-
-            setImageSize(getNewSize(newWindow.innerWidth));
-        };
-
-        window.addEventListener('resize', resizeHandler);
-        return () => {
-            window.removeEventListener('resize', resizeHandler);
-        };
-    }, []);
+    const imageSize = useResponsiveImage(getNewSize);
 
     return (
         <Image src={ImageSrc} alt={'a picture of me with a mustache. neutral face'} width={imageSize.w} height={imageSize.h}

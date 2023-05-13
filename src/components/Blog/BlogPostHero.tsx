@@ -7,6 +7,7 @@ import Icon_CopyLink from "../../../public/assets/icons/share/web-link.svg";
 import {Roboto, Rowdies, Ubuntu} from "next/font/google";
 import {useEffect, useState} from "react";
 import {BlogModel} from "@/lib/models";
+import {ShareLinkImage} from "@/components/Blog/ShareLinkImage";
 
 const rowdies = Rowdies({subsets: ['latin'], weight: '300'})
 const ubuntu = Ubuntu({subsets: ['latin'], weight: '500'})
@@ -35,7 +36,7 @@ export function BlogPostHero({coverImage, blog, ...otherProps}: {
             <div className={`-mt-5 md:-mt-20 w-11/12 md:w-9/12`}>
                 <h1 className={`${rowdies.className} bg-backgroundDawn px-3 md:px-10 pt-5 md:pt-10 rounded-t-2xl text-4xl md:text-5xl lg:text-[5.252rem]`} {...otherProps} />
                 <ThreeDots containerClassName={`relative bottom-3 md:bottom-5 right-5 md:right-7 z-10`}/>
-                <div className={'flex flex-row w-full justify-end mb-5 gap-5'}>
+                <div className={'flex flex-row w-full justify-end mb-5 gap-2 md:gap-5 text-xs md:text-base'}>
                     <div className={`flex flex-row justify-between items-center gap-3`}>
                         <span className={`${roboto.className}`}>
                                 {blog.timeToRead} min read
@@ -49,20 +50,20 @@ export function BlogPostHero({coverImage, blog, ...otherProps}: {
                             })}
                         </p>
                     </div>
-                    <div className={`flex justify-end items-center gap-4 pr-10`}>
+                    <div className={`flex justify-end items-center gap-2 md:gap-4 md:pr-10`}>
                         <Link target={"_blank"} className={`hover:opacity-50 mr-2`}
                               href={`https://twitter.com/intent/tweet?url=${currentUrl}&text=${blog.title}`}>
-                            <Image src={Icon_Twitter} alt={'Share on Twitter'} width={40} height={40}
+                            <ShareLinkImage src={Icon_Twitter} alt={'Share on Twitter'} width={40} height={40}
                                    className={`cursor-pointer`}/>
                         </Link>
                         <Link target={"_blank"} className={`hover:opacity-50`}
                               href={`https://www.linkedin.com/shareArticle?mini=true&url=${currentUrl}&title=${blog.title}`}>
-                            <Image src={Icon_Linkedin} alt={'Share on LinkedIn'} width={30} height={30}
+                            <ShareLinkImage src={Icon_Linkedin} alt={'Share on LinkedIn'} width={30} height={30}
                                    className={`cursor-pointer`}/>
                         </Link>
                         <button className={`hover:opacity-50`}
                                 onClick={() => navigator.clipboard.writeText(currentUrl || "")}>
-                            <Image src={Icon_CopyLink} alt={'Copy link'} width={45} height={45}
+                            <ShareLinkImage src={Icon_CopyLink} alt={'Copy link'} width={45} height={45}
                                    className={`cursor-pointer`}/>
                         </button>
                     </div>
