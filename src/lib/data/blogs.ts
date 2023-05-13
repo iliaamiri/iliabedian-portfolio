@@ -56,5 +56,21 @@ export const blogs: Record<string, BlogModel> = {
         shadow: 'shadow-[inset_0px_-70px_50px_-70px_#00288D]',
         keywords: ['Setup Debugger', 'TypeScript Debugger', 'WebStorm'],
         tags: ['WebStorm', 'Debugger', 'TypeScript']
-    }
+    },
+    'when-and-how-to-leverage-a-debugger': {
+        id: 6,
+        title: 'When and How to Leverage a Debugger',
+        description: 'Sometimes, using a debugger is not the best idea. For example, if you\'re developing a fast-paced real-time application (e.g. multiplayer games),\n' +
+            'using a debugger is almost impossible. In this case, you kind of have to use logging to the console. But, let\'s say you are\n' +
+            'developing a software that doesn\'t require real-time interaction as much. Or if it does, it\'s slow and there are not so many\n' +
+            'events that are simultaneously happening.\n',
+        slug: 'when-and-how-to-leverage-a-debugger',
+        publishedAt: new Date("2023-05-13"),
+        timeToRead: 7,
+        backgroundColors: 'from-[#7D8800] via-[#00288D] to-[#06085F]',
+        placeholderColors: ['#7D8800', '#06085F'],
+        shadow: 'shadow-[inset_0px_-70px_50px_-70px_#00288D]',
+        keywords: [],
+        tags: ['Debugger']
+    },
 };
