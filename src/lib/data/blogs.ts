@@ -70,7 +70,7 @@ export const blogs: Record<string, BlogModel> = {
         backgroundColors: 'from-[#7D8800] via-[#00288D] to-[#06085F]',
         placeholderColors: ['#7D8800', '#06085F'],
         shadow: 'shadow-[inset_0px_-70px_50px_-70px_#00288D]',
-        keywords: [],
-        tags: ['Debugger']
+        keywords: ['When to use a debugger', 'How to use a debugger', 'Debugger'],
+        tags: ['Debugger', 'WebStorm', 'JavaScript']
     },
 };
