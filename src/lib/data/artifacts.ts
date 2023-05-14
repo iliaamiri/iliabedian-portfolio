@@ -6,7 +6,7 @@ export const artifacts: Record<string, ArtifactModel> = {
         id: 2,
         name: "IGAQ 🏳️‍🌈",
         slug: "igaq",
-        imageUrl: "/assets/mockups/igaq.svg",
+        imageUrl: "/assets/mockups/igaq.jpg",
         summaryText: "I Got A Queery (IGAQ) provides a safe space for the members of the LGBTQ+ community to ask questions, share stories, and read resources about all things LGBTQ+.",
         technologies: [
             {
@@ -55,7 +55,7 @@ export const artifacts: Record<string, ArtifactModel> = {
         id: 1,
         name: "Tactical Pigeons 🐦",
         slug: "tactical-pigeon",
-        imageUrl: "/assets/mockups/tactical-pigeon.svg",
+        imageUrl: "/assets/mockups/tactical-pigeon.jpg",
         summaryText: "A pigeon focused, turn based multiplayer strategy game where you attack, defend, and steal food from rival pigeons. The interdisciplinary term project in our second semester at BCIT using the foundational skills we learned so far.",
         technologies: [
             {

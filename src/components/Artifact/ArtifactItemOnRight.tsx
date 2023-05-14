@@ -17,13 +17,13 @@ export function ArtifactItemOnRight({artifact}: { artifact: ArtifactModel }) {
                 <Link href={`/artifact-detail/${artifact.slug}#readme`} scroll={false}>
                     <div
                         className={`w-full md-w-11/12 flex flex-col justify-center items-center`}>
-                        <div className={`w-9/12 md:w-9/12 hover:scale-[1.03] ease-in-out duration-300 cursor-pointer`}>
+                        <div className={`w-11/12 md:w-9/12 hover:scale-[1.03] ease-in-out duration-300 cursor-pointer`}>
                             <div
                                 style={{backgroundImage: `url(${artifact.imageUrl})`}}
                                 className={`flex justify-center w-full md:w-full rounded-3xl justify-self-center aspect-video bg-no-repeat bg-cover`}>
                             </div>
                             <div
-                                className={`relative -top-20 flex flex-col w-full md:w-full text-[#F9F4F1] bg-gradient-to-t from-[#0A0A0A] via-[${artifact.primaryThemeColor}] rounded-b-2xl p-9 pt-20`}>
+                                className={`relative -top-20 flex flex-col w-full md:w-full text-[#F9F4F1] bg-gradient-to-t from-[#0A0A0A] via-[${artifact.primaryThemeColor}] rounded-b-2xl p-5 md:p-9 pt-20 md:pt-20`}>
                                 <h1 className={`text-[#F9F4F1] text-3xl ${rowdiesBold.className}`}>
                                     {artifact.name}
                                     <XSThreeDots

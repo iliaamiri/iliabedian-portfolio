@@ -8,8 +8,7 @@ import {StyledHeader} from "@/components/StyledHeader";
 import {ArtifactItem} from "@/components/Artifact/ArtifactItem";
 import {Roboto} from "next/font/google";
 import {code} from "@/lib/code";
-
-const roboto = Roboto({subsets: ['latin'], weight: '400'});
+import {MarkdownContainer} from "@/components/Markdown/MarkdownContainer";
 
 export default function ArtifactDetail() {
     const params = useParams();
@@ -32,12 +31,10 @@ export default function ArtifactDetail() {
                 {artifact.name}
             </StyledHeader>
             <ArtifactItem artifact={artifact} isOnRight={artifact.id % 2 === 0 } />
-            <div className={`flex flex-col items-center justify-center w-full ${roboto.className} markdown`} id={'readme'}>
-                <div className={`w-9/12 md:w-7/12 pb-20`}>
-                    {/* @ts-ignore - dynamic import doesn't understand .MDX types */}
-                    <MDXContent components={{code}} />
-                </div>
-            </div>
+            <MarkdownContainer>
+                {/* @ts-ignore - dynamic import doesn't understand .MDX types */}
+                <MDXContent components={{code}} />
+            </MarkdownContainer>
         </div>
     );
 }
