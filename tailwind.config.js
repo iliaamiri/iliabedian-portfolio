@@ -54,8 +54,8 @@ module.exports = {
         linesSvg: 'url("/assets/lines.svg")',
       },
       colors: {
-        primaryDawn: '#52B788',
-        skillConfidenceDawn: '#52B788',
+        primaryDawn: '#48AD7E',
+        skillConfidenceDawn: '#48AD7E',
 
         secondaryDawn: '#5441FF',
 
