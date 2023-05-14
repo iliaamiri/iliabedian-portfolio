@@ -41,7 +41,7 @@ export default function Home({searchParams}: any) {
                 </div>
             </div>
 
-            <div className={'relative top-[32rem] md:-top-10 lg:top-20'} id={'categories'}></div>
+            <div className={'relative top-[40rem] md:-top-10 lg:top-20'} id={'categories'}></div>
             <div
                 className={`${rowdies.className} relative flex flex-col md:flex-row justify-center items-center gap-28 mt-14 md:mt-0 md:pl-10 md:mb-24 lg:mt-28 lg:mb-32`}>
                 <Link href={'https://callista-stefanie.com'} target={'_blank'}>
