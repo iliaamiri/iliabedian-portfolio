@@ -6,7 +6,6 @@ export const artifacts: Record<string, ArtifactModel> = {
         id: 2,
         name: "IGAQ 🏳️‍🌈",
         slug: "igaq",
-        imageUrl: "/assets/mockups/igaq.jpg",
         summaryText: "I Got A Queery (IGAQ) provides a safe space for the members of the LGBTQ+ community to ask questions, share stories, and read resources about all things LGBTQ+.",
         technologies: [
             {
@@ -28,7 +27,6 @@ export const artifacts: Record<string, ArtifactModel> = {
         id: 3,
         name: "InterviewPal 🤖",
         slug: "interviewpal",
-        imageUrl: "/assets/mockups/interviewpal.png",
         summaryText: "InterviewPal is a GPT-3.5 powered AI that helps you practice for your interviews. It will ask you common and relevant interview questions and give you insightful feedback on your answers.",
         technologies: [
             {
@@ -55,7 +53,6 @@ export const artifacts: Record<string, ArtifactModel> = {
         id: 1,
         name: "Tactical Pigeons 🐦",
         slug: "tactical-pigeon",
-        imageUrl: "/assets/mockups/tactical-pigeon.jpg",
         summaryText: "A pigeon focused, turn based multiplayer strategy game where you attack, defend, and steal food from rival pigeons. The interdisciplinary term project in our second semester at BCIT using the foundational skills we learned so far.",
         technologies: [
             {
@@ -83,7 +80,6 @@ export const artifacts: Record<string, ArtifactModel> = {
         id: 4,
         name: "Coughie ☕",
         slug: "coughie",
-        imageUrl: "/assets/mockups/coughie.svg",
         summaryText: "Coughie is a mobile-first web application designed to help people who want to quit their vaping habit. Users can input, track their progress, join a community, while growing their virtual plant 🌱.",
         technologies: [
             {
@@ -109,7 +105,6 @@ export const artifacts: Record<string, ArtifactModel> = {
         id: 5,
         name: "SignalR Chat App 🗨️",
         slug: "signalr-chat-app",
-        imageUrl: "/assets/mockups/signalr-chat-app.jpg",
         summaryText: "A chat application built with SignalR and .NET Core 7. Users can create chat rooms, join chat rooms, and send messages to each other in real time.",
         technologies: [
             {
@@ -135,7 +130,6 @@ export const artifacts: Record<string, ArtifactModel> = {
         id: 7,
         name: "ICBC Slot Sniper 🎯",
         slug: "icbc-slot-sniper",
-        imageUrl: "/assets/mockups/icbc-slot-sniper.jpg",
         summaryText: "A web bot that finds the closest time for an ICBC Road Test. It uses Selenium to automate the process of booking an appointment" +
             "all by itself. It can read your inbox and scan the verification code sent by ICBC.",
         technologies: [
@@ -162,7 +156,6 @@ export const artifacts: Record<string, ArtifactModel> = {
         id: 6,
         name: "Jeddit 🤡",
         slug: "jeddit",
-        imageUrl: "/assets/mockups/jeddit.jpg",
         summaryText: "Jeddit is a clone of Reddit. I built this project as a way to learn more about Express.js and JavaScript.",
         technologies: [
             {
@@ -188,7 +181,6 @@ export const artifacts: Record<string, ArtifactModel> = {
         id: 7,
         name: "Pixel Art 🎨",
         slug: "pixel-art",
-        imageUrl: "/assets/mockups/pixel-art.jpg",
         summaryText: "A website built with Next.js and Prisma. Users can create pixel art and share it with others. It uses Next Auth for " +
             "authentication and authorization. It uses Vercel for hosting and serverless functions.",
         technologies: [

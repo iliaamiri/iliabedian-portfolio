@@ -6,7 +6,6 @@ export interface ArtifactModel {
 
     name: string;
     slug: string;
-    imageUrl: string;
     summaryText: string;
     technologies: [
         {

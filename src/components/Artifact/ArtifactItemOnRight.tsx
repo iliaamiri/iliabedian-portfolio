@@ -19,7 +19,7 @@ export function ArtifactItemOnRight({artifact}: { artifact: ArtifactModel }) {
                         className={`w-full md-w-11/12 flex flex-col justify-center items-center`}>
                         <div className={`w-11/12 md:w-9/12 hover:scale-[1.03] ease-in-out duration-300 cursor-pointer`}>
                             <div
-                                style={{backgroundImage: `url(${artifact.imageUrl})`}}
+                                style={{backgroundImage: `url(/assets/mockups/${artifact.slug}.jpg)`}}
                                 className={`flex justify-center w-full md:w-full rounded-3xl justify-self-center aspect-video bg-no-repeat bg-cover`}>
                             </div>
                             <div

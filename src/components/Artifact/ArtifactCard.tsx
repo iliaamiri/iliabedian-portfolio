@@ -15,7 +15,7 @@ export function ArtifactCard({ artifact }: { artifact: ArtifactModel }) {
                 <div
                     // style={{ backgroundImage: `url(${artifact.imageUrl})` }}
                     className={`flex justify-center rounded-3xl justify-self-center aspect-video bg-no-repeat bg-cover`}>
-                    <Image src={artifact.imageUrl}
+                    <Image src={`/assets/mockups/${artifact.slug}-min.jpg`}
                            alt={artifact.summaryText}
                            width={400} height={300}
                            placeholder={'blur'}
