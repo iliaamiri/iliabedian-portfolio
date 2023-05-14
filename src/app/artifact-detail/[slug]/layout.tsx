@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import {getBlog} from "@/app/blog/[slug]/helpers";
 import {Suspense} from "react";
 import {Loading} from "@/components/Loading";
+import {getArtifact} from "@/app/artifact-detail/[slug]/helpers";
 
 export function generateMetadata({ params }: { params: { slug: string }}): Metadata {
-    const blog = getBlog(params.slug);
-    if (blog == null) {
+    const artifact = getArtifact(params.slug);
+    if (artifact == null) {
         return {
             title: 'Page Not Found - 404',
             description: 'The page you are looking for does not exist.',
@@ -18,12 +18,12 @@ export function generateMetadata({ params }: { params: { slug: string }}): Metad
     }
 
     return {
-        title: blog.title,
-        description: blog.description,
-        keywords: blog.keywords.join(','),
+        title: artifact.name,
+        description: artifact.summaryText,
+        keywords: ['Eiliya Abedianamiri', 'Ilia Abedianamiri'],
         authors: {
             name: 'Eiliya Abedianamiri',
-            url: 'https://iliabedian.com',
+            url: `https://iliabedian.com/artifact-detail/${artifact.slug}`,
         }
     }
 }

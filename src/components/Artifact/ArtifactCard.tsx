@@ -10,7 +10,7 @@ const rowdiesBold = Rowdies({ subsets: ['latin'], weight: '700' })
 
 export function ArtifactCard({ artifact }: { artifact: ArtifactModel }) {
     return (
-        <Link href={`/artifact-detail/${artifact.slug}#readme`} scroll={false} className={`flex md:w-10/12`} >
+        <Link href={`/artifact-detail/${artifact.slug}`} scroll={false} className={`flex md:w-10/12`} >
             <div className={`flex flex-col items-stretch h-full justify-center hover:scale-[1.03] ease-in-out duration-300 cursor-pointer grayscale hover:grayscale-0`}>
                 <div
                     // style={{ backgroundImage: `url(${artifact.imageUrl})` }}

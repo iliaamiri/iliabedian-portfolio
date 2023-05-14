@@ -1,80 +1,23 @@
-import {TechnologyModel} from "@/lib/models";
-
-type skills =
-    'C#'
-    | 'PHP'
-    | 'JavaScript'
-    | 'TypeScript'
-    | 'NestJs'
-    | 'React'
-    | 'Next.js'
-    | 'Express.js'
-    | '.NET Core'
-    |
-    'Laravel'
-    | 'Python'
-    | 'Flask'
-    | 'MySQL'
-    | 'MSSQL'
-    | 'PostgreSQL'
-    | 'Sqlite'
-    | 'Neo4j'
-    | 'Redis'
-    | 'MongoDB'
-    | 'AWS'
-    | 'Azure'
-    | 'Vercel'
-    | 'Pusher.js'
-
-    | 'Docker'
-    | 'Virtual Machines'
-    | 'Linux'
-    | 'OOP'
-    | 'MVC'
-    | 'MVVM'
-    | 'Event-driven Architecture'
-    | 'Serverless Functions'
-    | 'Microservices'
-
-    | 'TailwindCSS'
-    | 'Material UI'
-    | 'Bootstrap'
-    | 'Figma'
-    | 'Styled Components'
-    | 'SASS'
-    | 'CSS'
-    | 'HTML'
-    | 'Git'
-    | 'GitHub'
-    | 'GitLab'
-    | 'Jira'
-    | 'OpenAI API'
-    | 'Trello'
-    | 'Railway'
-    | 'Prompt Engineering'
-| 'JSX'
-| 'OOP'
-| 'Prototyping'
-| 'UX'
-| 'UI'
-| 'Wireframing'
-| 'Sketching'
-| 'Design'
-| 'Illustration'
-| 'Animation'
-| 'Preact'
-| 'Vite'
-| 'Local Storage'
-| 'Socket.io'
-| 'Events'
-| 'EJS'
-
-
-
-export const technologies: Record<skills, TechnologyModel> = {
+export const technologies = {
     EJS: {
         skillName: 'EJS',
         confidenceLevel: 100
+    },
+    SeleniumUI: {
+        skillName: 'SeleniumUI',
+        confidenceLevel: 90
+    },
+    Firefox: {
+        skillName: 'Firefox',
+        confidenceLevel: 100
+    },
+    'Web Scraping': {
+        skillName: 'Web Scraping',
+        confidenceLevel: 95
+    },
+    CentOS: {
+        skillName: 'CentOS',
+        confidenceLevel: 90
     },
     Events: {
         skillName: 'Events',
@@ -82,6 +25,14 @@ export const technologies: Record<skills, TechnologyModel> = {
     },
     'Socket.io': {
         skillName: 'Socket.io',
+        confidenceLevel: 100
+    },
+    'Real-Time': {
+        skillName: 'Real-Time',
+        confidenceLevel: 100
+    },
+    SignalR: {
+        skillName: 'SignalR',
         confidenceLevel: 100
     },
     Prototyping: {
@@ -276,6 +227,10 @@ export const technologies: Record<skills, TechnologyModel> = {
         skillName: "TailwindCSS",
         confidenceLevel: 100
     },
+    daisyUI: {
+        skillName: "daisyUI",
+        confidenceLevel: 40
+    },
     "Material UI": {
         skillName: "Material UI",
         confidenceLevel: 100
@@ -324,7 +279,7 @@ export const technologies: Record<skills, TechnologyModel> = {
         skillName: 'OpenAI API',
         confidenceLevel: 85
     }
-};
+} as const;
 
 // BE/FE related technologies: TypeScript, JavaScript, NestJs, React, Next.js, Express.js, C#, .NET Core, PHP, Laravel, Python, Flask
 // Database related: MySQL, MSSQL, PostgreSQL, Sqlite, Neo4j, Redis, MongoDB

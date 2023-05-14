@@ -48,6 +48,7 @@ export function MainHeader({}: {}) {
                         <ThreeDotsBurgerMenu onClick={() => setIsMenuOpen(!isMenuOpen)} containerClassName={`flex justify-center rotate-[270deg]`} />
                         <div className={`flex flex-col items-center w-full gap-10`}>
                             <Link href={"/"} onTouchEnd={handleTouchEndMenuItem} onClick={handleTouchEndMenuItem} className={`${rowdies.className} text-white text-2xl hover:text-secondaryDawn transition ease-in-out`}>Home</Link>
+                            <ScrollLink scroll={false} href={`${origin}/#artifacts`} onTouchEnd={handleTouchEndMenuItem} onClick={handleTouchEndMenuItem} className={`${rowdies.className} text-white text-2xl hover:text-secondaryDawn transition ease-in-out`}>Artifacts</ScrollLink>
                             <Link href={"/blog"} onTouchEnd={handleTouchEndMenuItem} onClick={handleTouchEndMenuItem} className={`${rowdies.className} text-white text-2xl hover:text-secondaryDawn transition ease-in-out`}>Blog</Link>
                             <Link href={"/about"} onTouchEnd={handleTouchEndMenuItem} onClick={handleTouchEndMenuItem} className={`${rowdies.className} text-white text-2xl hover:text-secondaryDawn transition ease-in-out`}>About</Link>
                             <ScrollLink scroll={false} href={`${origin}/#contact`} onTouchEnd={handleTouchEndMenuItem} onClick={handleTouchEndMenuItem} className={`${rowdies.className} text-white text-2xl hover:text-secondaryDawn transition ease-in-out`}>Contact</ScrollLink>
@@ -59,6 +60,7 @@ export function MainHeader({}: {}) {
             </div>
             <div className={`hidden lg:flex justify-center items-center gap-3`}>
                 <Link href={"/"}><MenuButton>Home</MenuButton></Link>
+                <ScrollLink href={`${origin}/#artifacts`}><MenuButton>Artifacts</MenuButton></ScrollLink>
                 <Link href={"/blog"}><MenuButton>Blog</MenuButton></Link>
                 <Link href={"/about"}><MenuButton>About</MenuButton></Link>
                 <ScrollLink href={`${origin}/#contact`}><MenuButton>Contact</MenuButton></ScrollLink>
