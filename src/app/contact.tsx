@@ -20,7 +20,7 @@ export function Contact() {
                 <Link className={'mailtoui'} href="mailto:iliaabedianamiri@gmail.com">
                     <DiamondCube text={'Email Me'} containerClassName={`grayscale hover:grayscale-0 contactDiamondCube bg-gradient-to-br from-[#A198EE] via-[#2D6A4F] to-[#52B788] before:w-10 cursor-pointer`} />
                 </Link>
-                <Link href={''} className={'opacity-0'}>
+                <Link href={'/'} className={'opacity-0'}>
                     <DiamondCube text={'YouTube'} containerClassName={`grayscale hover:grayscale-0 contactDiamondCube bg-gradient-to-br from-[#22246A] via-[#2D6A4F] to-[#52B788] cursor-pointer`} />
                 </Link>
             </div>
