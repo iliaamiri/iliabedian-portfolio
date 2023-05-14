@@ -1,7 +1,6 @@
 import {Rowdies} from "next/font/google";
 
-const rowdies = Rowdies({subsets: ['latin'], weight: '400'})
-
+const rowdies = Rowdies({subsets: ['latin'], weight: '400'});
 
 export function MenuButton({className = '', ...otherProps}: { className?: string, children?: any; }) {
     return (
