@@ -184,5 +184,34 @@ export const artifacts: Record<string, ArtifactModel> = {
         tailwindClassDetection: "via-[#00B4D8]",
         categories: [ArtifactCategory.BackEnd, ArtifactCategory.FullStack]
     },
+    'pixel-art': {
+        id: 7,
+        name: "Pixel Art 🎨",
+        slug: "pixel-art",
+        imageUrl: "/assets/mockups/pixel-art.jpg",
+        summaryText: "A website built with Next.js and Prisma. Users can create pixel art and share it with others. It uses Next Auth for " +
+            "authentication and authorization. It uses Vercel for hosting and serverless functions.",
+        technologies: [
+            {
+                list: [
+                    technologies['JavaScript'], technologies['Next.js'], technologies['Prisma'], technologies['Vercel'],
+                    technologies['Serverless Functions'], technologies['MySQL']
+                ],
+                shouldMarquee: true
+            },
+            {
+                list: [
+                    technologies['HTML'], technologies['CSS'], technologies['TailwindCSS'], technologies['JSX'], technologies['GitHub'],
+                    technologies['Git'],
+                ],
+                shouldMarquee: true
+            },
+        ],
+        githubUrl: "https://github.com/iliaamiri/pixel_arts",
+        demoUrl: "https://pixel-arts-jade.vercel.app/",
+        primaryThemeColor: "#303030",
+        tailwindClassDetection: "via-[#303030]",
+        categories: [ArtifactCategory.FrontEnd, ArtifactCategory.FullStack, ArtifactCategory.BackEnd]
+    },
 };
 

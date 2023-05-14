@@ -11,6 +11,10 @@ export const technologies = {
         skillName: 'Firefox',
         confidenceLevel: 100
     },
+    Prisma: {
+        skillName: 'Prisma',
+        confidenceLevel: 95
+    },
     'Web Scraping': {
         skillName: 'Web Scraping',
         confidenceLevel: 95

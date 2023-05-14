@@ -12,10 +12,7 @@ const useArtifacts = (category: string | undefined) => {
             <ArtifactCard key={artifact.slug} artifact={artifact}/>
         ))
     };
-    if (!category) {
-        return result;
-    }
-    if (!validateArtifactCategory(category)) {
+    if (!category || !validateArtifactCategory(category)) {
         return result;
     }
 
