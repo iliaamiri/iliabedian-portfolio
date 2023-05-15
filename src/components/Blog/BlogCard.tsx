@@ -16,7 +16,7 @@ export function BlogCard({ blog }: Props) {
         <Link href={`/blog/${blog.slug}`} scroll={false} className={`[&:only-child]:col-start-2 flex md:w-10/12`} >
             <div className={`flex flex-col items-stretch w-full justify-center hover:scale-[1.03] ease-in-out duration-300 cursor-pointer shadow-2xl rounded-b-2xl mb-5`}>
                 <div
-                    style={{ backgroundImage: `url(/assets/blogs/${blog.slug}/card-cover.jpg), linear-gradient(to bottom, ${blog.placeholderColors[0]} 0%, ${blog.placeholderColors[1]} 100%)` }}
+                    style={{ backgroundImage: `url(/assets/blogs/${blog.slug}/card-cover.avif), linear-gradient(to bottom, ${blog.placeholderColors[0]} 0%, ${blog.placeholderColors[1]} 100%)` }}
                     className={`fadedImage ${blog.shadow} flex justify-center rounded-t-3xl justify-self-center aspect-video bg-no-repeat bg-cover`}>
                 </div>
                 <div
