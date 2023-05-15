@@ -1,5 +1,5 @@
 import {BlogCard} from "@/components/Blog/BlogCard";
-import {blogs} from "@/lib/data/blogs";
+import {sortedBlogs} from "@/lib/data/blogs";
 import {StyledHeader} from "@/components/StyledHeader";
 import {Metadata} from "next";
 
@@ -14,10 +14,6 @@ export function generateMetadata(): Metadata {
     }
 }
 
-const BlogCards = Object.values(blogs)
-    .sort((b1, b2) => b2.id - b1.id)
-    .map(blog => <BlogCard blog={blog} key={'blogCard' + blog.slug} />);
-
 export default function BlogIndex() {
     return (
         <div>
@@ -25,7 +21,7 @@ export default function BlogIndex() {
                 Blogs & Articles
             </StyledHeader>
             <div className={`grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 w-full gap-16 lg:gap-10 xl:gap-5 items-stretch justify-items-center px-5 pt-10 pb-20 lg:px-40`}>
-                {BlogCards}
+                {sortedBlogs.map(b => <BlogCard blog={b} key={'blogCard' + b.slug} />)}
             </div>
         </div>
     );

@@ -74,3 +74,6 @@ export const blogs: Record<string, BlogModel> = {
         tags: ['Debugger', 'WebStorm', 'JavaScript']
     },
 };
+
+export const sortedBlogs = Object.values(blogs)
+    .sort((b1, b2) => b2.id - b1.id);
