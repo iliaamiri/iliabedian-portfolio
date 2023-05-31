@@ -45,7 +45,9 @@ export function MainHeader({}: {}) {
 
                 <div className={`${isMenuOpen ? 'animate-slideInFromRight' : 'animate-slideOutToRight'} ${isHidden ? 'hidden' : ''} z-10 h-[100vh] absolute top-0 right-0 w-8/12 bg-gradient-to-b from-[#000000] via-[#19392A] to-[#2D6A4F] flex justify-center items-center`}>
                     <div className={`flex flex-row w-10/12`}>
-                        <ThreeDotsBurgerMenu onClick={() => setIsMenuOpen(!isMenuOpen)} containerClassName={`flex justify-center rotate-[270deg]`} />
+                        <div className={`flex items-center`}>
+                            <ThreeDotsBurgerMenu onClick={() => setIsMenuOpen(!isMenuOpen)} containerClassName={`items-center justify-center h-max rotate-[270deg]`} />
+                        </div>
                         <div className={`flex flex-col items-center w-full gap-10`}>
                             <Link href={"/"} onTouchEnd={handleTouchEndMenuItem} onClick={handleTouchEndMenuItem} className={`${rowdies.className} text-white text-2xl hover:text-secondaryDawn transition ease-in-out`}>Home</Link>
                             <ScrollLink scroll={false} href={`${origin}/#artifacts`} onTouchEnd={handleTouchEndMenuItem} onClick={handleTouchEndMenuItem} className={`${rowdies.className} text-white text-2xl hover:text-secondaryDawn transition ease-in-out`}>Showcases</ScrollLink>
