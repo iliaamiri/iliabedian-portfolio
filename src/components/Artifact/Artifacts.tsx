@@ -1,4 +1,4 @@
-import {artifacts} from "@/lib/data/artifacts";
+import {artifacts} from "@/data/artifacts";
 import {ArtifactCard} from "@/components/Artifact/ArtifactCard";
 import {ArtifactCategory, validateArtifactCategory} from "@/lib/models";
 import {StyledHeader} from "@/components/StyledHeader";

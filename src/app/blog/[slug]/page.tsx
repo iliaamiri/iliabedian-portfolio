@@ -17,7 +17,7 @@ export default function BlogPost() {
 
     const MDXBlogPost = dynamic(() => import(
         /* webpackInclude: /\.mdx$/ */
-        `@/lib/data/posts/${params.slug}/post.mdx`
+        `@/data/posts/${params.slug}/post.mdx`
         ), {
         ssr: true,
     } as DynamicOptions<{}>);

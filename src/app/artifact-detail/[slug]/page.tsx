@@ -20,7 +20,7 @@ export default function ArtifactDetail() {
 
     const MDXContent = dynamic(() => import(
         /* webpackInclude: /\.mdx$/ */
-        `@/lib/data/artifacts/${params.slug}/content.mdx`
+        `@/data/artifacts/${params.slug}/content.mdx`
         ), {
         ssr: true,
     } as DynamicOptions<{}>);

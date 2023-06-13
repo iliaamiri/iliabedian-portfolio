@@ -1,19 +1,15 @@
 import {Rowdies} from 'next/font/google'
 import {StyledHeader} from "@/components/StyledHeader";
-import {artifacts} from "@/lib/data/artifacts";
-import {DiamondCube} from "@/components/DiamondCube";
 import Link from "next/link";
 import Image from "next/image";
 import {AestheticRender} from "@/components/AestheticRender";
 import IliaHeadshotSVG from '../../public/assets/ilia-headshot.svg';
 import {placeholdersBase64} from "@/lib/utils";
-import {ArtifactCard} from "@/components/Artifact/ArtifactCard";
-import {ArtifactCategory, validateArtifactCategory} from "@/lib/models";
+import {ArtifactCategory} from "@/lib/models";
 import {CategorySelector} from "@/components/Artifact/CategorySelector";
 import {Artifacts} from "@/components/Artifact/Artifacts";
 
 const rowdies = Rowdies({subsets: ['latin'], weight: '300'});
-
 
 export default function Home({searchParams}: any) {
     return (

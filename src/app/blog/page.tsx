@@ -1,5 +1,5 @@
 import {BlogCard} from "@/components/Blog/BlogCard";
-import {sortedBlogs} from "@/lib/data/blogs";
+import {sortedBlogs} from "@/data/blogs";
 import {StyledHeader} from "@/components/StyledHeader";
 import {Metadata} from "next";
 

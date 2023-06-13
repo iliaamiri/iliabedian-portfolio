@@ -12,6 +12,7 @@ export const AestheticRender = (seed: number = 10, speed: 'slow' | 'fast' = 'fas
 
         render.push(
             <div
+                key={i}
                 style={{
                     backgroundColor: `${i % rand == 0 ? '#5441FF' : (i % (rand + 1) ? '#3C9069' : '#5441FF')}`,
                     width: `${randomIntFromInterval(30, 150)}px`,

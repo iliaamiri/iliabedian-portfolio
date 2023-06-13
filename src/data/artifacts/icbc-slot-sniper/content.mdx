@@ -1,0 +1,42 @@
+## Summary ✨
+A web bot that helps you find the closest appointment for your next Road Test in British Columbia, Canada. It logs-in
+to ICBC's website for you, navigates through the website, and starts looking for the closest appointment and notifies
+you when it finds one. It can also book the appointment on your behalf by scanning your inbox for the confirmation email
+and filling out the form for you.
+
+## Details 🔎
+Over December 2021 winter break, I was trying to book a road test appointment for my New Driver license. Unfortunately,
+I saw that the earliest available appointment was in March 2022! But, I was not surprised. It's just Canada things.
+
+So, I decided to build a web bot that would automatically find the closest appointment for me by refreshing the page
+every 5 seconds until it finds a newly available appointment because people cancel their appointments all the time.
+
+I used `Selenium` to navigate through the website. It takes the user's credentials in the config file and logs-in to
+the website. Then it goes to the appropriate link, enters the preferred location and starts refreshing the page every
+5 seconds. When it finds a new appointment available on the proper location and date, it notifies the user and clicks the
+book button.
+
+The website then sends a verification code to the user's email. Now, the bot is already waiting for the code to be sent
+by scanning the user's inbox. Once the code is received, it will enter it in the form and book the appointment automatically.
+
+## Challenges 🥵
+The first challenge was to setup the environment. Selenium had to be installed and the appropriate driver had to be
+downloaded. I used `geckodriver` for Firefox. And, I've done all the work in a `CentOS` `Virtual Machine` and forwarded
+the port to my local machine.
+
+Another challenge was to find the right elements on the page. I had to use the `dev tool`
+in the browser to find the right `xpath` for the elements I wanted to interact with. Also, I had to use `time.sleep()`
+to make sure the page is loaded before interacting with it.
+
+The last challenge which was the most interesting one for me was to automatically fill the verification code form and
+book the appointment. This was fun because it was my first time doing it and I was amazed by it personally.
+
+And lastly, ICBC's website is always changing its behavior. IT was a challenge to keep up with the changes and update
+the code regularly. That is the main reason that I can never be confident that this bot will work forever. But, with a
+little bit of tweaking, it can be made to work again.
+
+## Takeaway 📖
+I familiarized myself with the Gmail's API and learned how to use it to scan the inbox. I also learned how SEO works on
+GitHub since my repository received a few stars and a few people contacted me to help them setting up the bot. Knowing
+that there were already many other projects that did the same thing, I was surprised that people were interested in my
+project.
