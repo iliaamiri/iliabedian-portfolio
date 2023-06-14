@@ -73,6 +73,21 @@ export const blogs: Record<string, BlogModel> = {
         keywords: ['When to use a debugger', 'How to use a debugger', 'Debugger'],
         tags: ['Debugger', 'WebStorm', 'JavaScript']
     },
+    'implementing-token-based-authentication-with-nestjs-guards': {
+        id: 7,
+        title: 'Effortless Security - Implementing Token-Based Authentication with NestJS Guards',
+        description: 'There are times that you don\'t necessarily care about having a stateful authentication and your' +
+            ' microservice is going to be used internally by other services. But, you still want to make sure that even ' +
+            'if your internal microservice got discovered, bad actors will still need a key to use your service!',
+        slug: 'implementing-token-based-authentication-with-nestjs-guards',
+        publishedAt: new Date("2023-06-13 9:00"),
+        timeToRead: 5,
+        backgroundColors: 'from-[#860924] via-[#EF1645] to-[#FF5E5E]',
+        placeholderColors: ['#860924', '#FF5E5E'],
+        shadow: 'shadow-[inset_0px_-70px_50px_-30px_#860924]',
+        keywords: ['Token Based Authentication', 'NestJS Guards', 'Microservice authentication simple'],
+        tags: ['Token-Based Authentication', 'NestJS', 'NestJS Guards']
+    },
 };
 
 export const sortedBlogs = Object.values(blogs)

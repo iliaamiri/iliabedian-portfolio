@@ -4,6 +4,7 @@ const withMDX = require('@next/mdx')()
 const nextConfig = {
   experimental: {
     appDir: true,
+    serverActions: true,
   },
 
 }

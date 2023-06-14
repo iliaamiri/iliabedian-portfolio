@@ -1,0 +1,130 @@
+import {Note} from '@/components/Markdown/Note';
+import Image_ArchDemo from './assets/arch-demo.png';
+
+There are times that you don't necessarily care about having a stateful authentication and your microservice is going to be used internally by
+other services. But, you still want to make sure that even if your internal microservice got discovered, bad actors will still
+need a key to use your service! 🔑
+
+> A door that can be locked is better than an open door if you have some private things going on in there, you know.
+
+Let's dig in. ([skip to the code](#show-me-code))
+
+<Note>For clarification, here's a diagram that shows how the authentication process is going to work:</Note>
+
+<img src={Image_ArchDemo.src} alt={'Demonstration of the Architecture. Shows a diagram of two entities: ' +
+  '- An External Consumer that wants to consume your Microservice' +
+  '- Your microservice' +
+  'The diagram shows that the consumer sends a requests to the microservice with an Authorization header with the value of ' +
+  'Bearer <your token>'} height={'300'} className={'w-full block'} />
+
+<Note>
+You will need a strong token that is hard to guess. Just like picking a strong password, make sure it's super long
+but not too long to make the RAM go burr 😵‍💫
+
+A great candidate would be `zIA;!I}#4FI~IcK9K_aIqT{:hW"KPp0pcxKzT^AH5hG'Y%*ZE{__q6~9[3t,q_J` as an example which can be my
+Wi-Fi password.
+</Note>
+
+<Note type="warning">
+Keep in mind that a token-based authentication is useful when your server is not super on the surface and publicly
+accessible. If security is crucial to your solution or project, consider implementing a more secure method such as JSON Web Token (JWT)
+</Note>
+
+## Setup the project
+Here's how I setup the project:
+
+### 1. Install NestJS and the required additional dependencies
+```bash
+$ npx @nestjs/cli new project-name
+
+$ cd project-name
+$ npm run start
+
+  # to allow reading the token from configurations
+$ npm i --save @nestjs/config
+```
+
+### 2. Setup the Configuration module of NestJS
+You can read more on the original documentation here.
+
+Simply added this to the `imports` array in my `app.module.ts`:
+`ConfigModule.forRoot({ isGlobal: true }),`
+
+  <p id="show-me-code"></p>
+
+A view of my `app.module.ts`:
+```typescript
+import { Module } from '@nestjs/common';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
+
+@Module({
+  imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
+  ],
+  controllers: [AppController],
+  providers: [AppService],
+})
+export class AppModule {}
+```
+
+## Adding the Guard
+Now, NestJs doesn't just support middlewares. <a href="https://docs.nestjs.com/guards" target="_blank">Guards</a> in '
+  NestJs are special classes that are used for a **single responsiblity** of deciding whether or not the incoming request
+  should continue or rejected with an _Unauthorized status_.
+
+Instead of setting up a barebone middleware to check whether a user is authorized to use the service, a guard makes your life easier
+by letting you return a `boolean` to either allow or block the request.
+
+<Note>I'm reading the value of the secret token from an `.env` file.</Note>
+```env
+API_SECRET_KEY="<a random secure key>"
+```
+
+In order to add a new Guard, make a new file in your codebase (anywhere under `src` folder) and add this content inside of it:
+```typescript
+import { Injectable, CanActivate, ExecutionContext } from '@nestjs/common';
+import { Observable } from 'rxjs';
+import { ConfigService } from '@nestjs/config';
+
+@Injectable()
+export class AuthTokenGuard implements CanActivate {
+  constructor(private configService: ConfigService) {}
+
+  canActivate(context: ExecutionContext): boolean | Promise<boolean> | Observable<boolean> {
+    const request = context.switchToHttp().getRequest();
+
+    const bearerToken = request.headers.authorization;
+    if (!bearerToken) {
+      return false;
+    }
+
+    const apiSecretKey = this.configService.get<string>('API_SECRET_KEY');
+
+    const token = bearerToken.split(' ')[1];
+    return !(!token || token !== apiSecretKey);
+  }
+}
+```
+<Note>The location of the file depends on your preference and opinion on how to orgnaize your codebase.</Note>
+<Note>By convention, the NestJS community goes with this file format: `*.guard.ts`. I named my file `authToken.guard.ts`. However,
+  it's merely a naming convention choice.</Note>
+
+## Using the Guard
+Now, you can globally bind the Guard by adding the second line in your `main.ts` file:
+```typescript
+const app = await NestFactory.create(AppModule);
+app.useGlobalGuards(new AuthTokenGuard());
+```
+This will make sure that all requests from any protocol will hit your Guard and your Guard will reject the request if
+there are no `Bearer token` in the request headers, or the token does not match with the one in your `.env`.
+
+<Note>
+  Read more on NestJS' documentation on <a href="https://docs.nestjs.com/guards#binding-guards" target="_blank">other ways that you can bind a Guard</a>
+</Note>
+
+And that's it! If you have any issues or questions regarding this article, feel free to reach out to me on twitter (link below).
+I'll also appreciate any constructive feedback from anyone.
+
+Peace =)
