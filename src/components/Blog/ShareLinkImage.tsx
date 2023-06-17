@@ -2,16 +2,14 @@
 import Image, {ImageProps} from "next/image";
 import {useResponsiveImage} from "@/lib/hooks/useResponsiveImage";
 
-const calculateTheSize = (windowWidth: number) => {
-    if (windowWidth < 400) {
-        return { w: 20, h: 20 };
-    } else  {
-        return { w: 30, h: 30 };
-    }
-}
-
 export function ShareLinkImage({ ...imageProps }: ImageProps) {
-    const size = useResponsiveImage(calculateTheSize);
+    const size = useResponsiveImage((windowWidth: number) => {
+        if (windowWidth < 400) {
+            return { w: 20, h: 20 };
+        } else  {
+            return { w: 30, h: 30 };
+        }
+    });
 
     return (
         // eslint-disable-next-line jsx-a11y/alt-text
