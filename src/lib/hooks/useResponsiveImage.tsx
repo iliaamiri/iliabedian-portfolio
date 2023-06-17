@@ -1,9 +1,9 @@
 'use client';
 import {useEffect, useState} from "react";
 
-export function useResponsiveImage(calculateTheSize: (windowWidth: number) => { w: number, h: number }) {
+export function useResponsiveImage(calculateTheSize: (windowWidth: number) => { w: number, h: number }, defaultSize = { h: 30, w: 30 }) {
     const [size, setSize] = useState(
-        global.window !== undefined ? calculateTheSize(window.innerWidth) : { h: 300, w: 300 });
+        global.window !== undefined ? calculateTheSize(window.innerWidth) : defaultSize);
 
     useEffect(() => {
         const resizeHandler = (e: UIEvent) => {
