@@ -5,7 +5,7 @@ export function useResponsiveImage(calculateTheSize: (windowWidth: number) => { 
     const [size, setSize] = useState({ h: 30, w: 30 });
 
     useEffect(() => {
-        calculateTheSize(window.innerWidth)
+        setSize(calculateTheSize(window.innerWidth));
 
         const resizeHandler = (e: UIEvent) => {
             const newWindow = e.target as Window;
