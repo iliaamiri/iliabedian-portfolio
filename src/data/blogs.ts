@@ -43,18 +43,18 @@ export const blogs: Record<string, BlogModel> = {
         keywords: ['How to deploy PHP on Railway', 'Deploy PHP on Railway', 'Deploy PHP on Railway using Railway CLI'],
         tags: ['Railway', 'PHP', 'Vanilla PHP']
     },
-    'best-way-to-setup-debugger-in-webstorm-typescript-projects': {
+    'setup-debugger-in-webstorm-typescript-projects': {
         id: 5,
-        title: 'Best Way to Setup debugger in WebStorm for TypeScript Projects',
+        title: 'Setup debugger in WebStorm for TypeScript Projects',
         description: 'Whether to use a debugger or not has probably been one of the most spicy topics of software development. When I\n' +
             'tell some people that why they should use a debugger, they take it as a personal insult. As if I insulted their mother.',
-        slug: 'best-way-to-setup-debugger-in-webstorm-typescript-projects',
+        slug: 'setup-debugger-in-webstorm-typescript-projects',
         publishedAt: new Date("2023-05-05"),
         timeToRead: 10,
         backgroundColors: 'from-[#7D8800] via-[#00288D] to-[#06085F]',
         placeholderColors: ['#7D8800', '#06085F'],
         shadow: 'shadow-[inset_0px_-70px_50px_-70px_#00288D]',
-        keywords: ['Setup Debugger', 'TypeScript Debugger', 'WebStorm'],
+        keywords: ['Debugger', 'WebStorm', 'TypeScript Debugger'],
         tags: ['WebStorm', 'Debugger', 'TypeScript']
     },
     'when-and-how-to-leverage-a-debugger': {
