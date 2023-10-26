@@ -13,7 +13,7 @@ import {MarkdownContainer} from "@/components/Markdown/MarkdownContainer";
 export default function ArtifactDetail() {
     const params = useParams();
 
-    const artifact = getArtifact(params.slug);
+    const artifact = getArtifact(params.slug as string);
     if (artifact == null) {
         return <NotFound />;
     }
