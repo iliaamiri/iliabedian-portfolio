@@ -10,7 +10,7 @@ import {NotFound} from "@/components/Errors/404";
 export default function BlogPost() {
     const params = useParams();
 
-    const blog = getBlog(params.slug);
+    const blog = getBlog(params.slug as string);
     if (blog == null) {
         return <NotFound />;
     }
