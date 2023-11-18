@@ -1,7 +1,7 @@
 'use client';
 import React, { PropsWithChildren } from 'react';
 import Link, { LinkProps } from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 type AnchorProps = Omit<
   React.AnchorHTMLAttributes<HTMLAnchorElement>,
