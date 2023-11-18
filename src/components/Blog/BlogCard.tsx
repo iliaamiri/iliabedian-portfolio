@@ -15,7 +15,6 @@ export function BlogCard({ blog }: Props) {
   return (
     <Link
       href={`/blog/${blog.slug}`}
-      scroll={false}
       className={`flex md:w-10/12 [&:only-child]:col-start-2`}
     >
       <div
