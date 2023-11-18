@@ -14,30 +14,21 @@ export function ArtifactItemOnRight({artifact}: { artifact: ArtifactModel }) {
         <div className={`flex flex-col md:flex-row w-full justify-end`}>
 
             <div className={`flex-col flex justify-start items-start w-full md:w-7/12 pt-10`}>
-                <Link href={`/artifact-detail/${artifact.slug}#readme`}>
-                    <div
-                        className={`w-full md-w-11/12 flex flex-col justify-center items-center`}>
-                        <div className={`w-11/12 md:w-9/12 hover:scale-[1.03] ease-in-out duration-300 cursor-pointer`}>
+                <div className={`w-full md-w-11/12 flex flex-col justify-center items-center`}>
+                    <Link href={`/artifact-detail/${artifact.slug}#readme`}
+                          className={`w-11/12 md:w-9/12 hover:scale-[1.03] ease-in-out duration-300 cursor-pointer`}>
                             <div
                                 style={{backgroundImage: `url(/assets/mockups/${artifact.slug}.jpg)`}}
                                 className={`flex justify-center w-full md:w-full rounded-3xl justify-self-center aspect-video bg-no-repeat bg-cover`}>
                             </div>
                             <div
                                 className={`relative -top-20 flex flex-col w-full md:w-full text-black  rounded-b-2xl p-5 md:p-9 pt-20 md:pt-20`}>
-                                <h1 className={`text-black text-3xl ${rowdiesBold.className}`}>
-                                    {artifact.name}
-                                    <XSThreeDots
-                                        containerClassName={`relative bottom-2 md:bottom-1 right-2 md:right-1 z-10 w-[1rem] md:w-[1.1rem]`}
-                                        dtoColor={`bg-[black]`}
-                                    />
-                                </h1>
                                 <p className={`${ubuntu.className} pt-2`}>
                                     {artifact.summaryText}
                                 </p>
                             </div>
-                        </div>
-                    </div>
-                </Link>
+                    </Link>
+                </div>
             </div>
 
             {/* diamond (rotated div) */}
