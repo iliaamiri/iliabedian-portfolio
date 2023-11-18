@@ -37,7 +37,7 @@ export function MainHeader({}: {}) {
       className={`fixed top-0 z-50 flex w-full justify-between px-5 pb-1 pt-2 shadow-xl backdrop-blur-sm md:px-10 xl:px-52`}
     >
       <div className={`relative h-12 w-12 md:h-14 md:w-14`}>
-        <Link href={'/'}>
+        <a href={'/'}>
           <Image
             src={Logo}
             alt={'Main Logo in Header navbar'}
@@ -45,7 +45,7 @@ export function MainHeader({}: {}) {
             placeholder={'blur'}
             blurDataURL={'data:image/png;base64,' + placeholdersBase64.green}
           />
-        </Link>
+        </a>
       </div>
 
       <div className={`flex cursor-pointer items-center justify-center`}>
