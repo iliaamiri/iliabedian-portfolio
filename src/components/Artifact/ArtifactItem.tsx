@@ -11,7 +11,7 @@ export function ArtifactItem({artifact, isOnRight = true}: { artifact: ArtifactM
     const secondSeparatorWidth = 100 - firstSeparatorWidth;
 
     return (
-        <Suspense fallback={<Loading />}>
+        <>
             {isOnRight ? ArtifactItemOnRight({artifact}) : ArtifactItemOnLeft({artifact})}
             <div className={`w-full flex flex-row gap-6 pb-5 px-5`}>
                 <div style={{
@@ -21,6 +21,6 @@ export function ArtifactItem({artifact, isOnRight = true}: { artifact: ArtifactM
                     width: `${secondSeparatorWidth}%`,
                 }} className={`h-[0.6rem] bg-[#22246A] rounded-full`}></div>
             </div>
-        </Suspense>
+        </>
     );
 }
