@@ -1,5 +1,6 @@
 interface Props {
     containerClassName?: string;
+    dtoColor?: string;
     onClick?: () => void;
 }
 export function ThreeDots({containerClassName = ""}: Props) {
@@ -32,8 +33,8 @@ export function ThreeDotsBurgerMenu({containerClassName = "", onClick}: Props) {
     );
 }
 
-export function XSThreeDots({containerClassName = ""}: Props) {
-    let s = 'w-2 h-2 md:w-2 md:h-2 bg-[white] rounded shrink-0 grow-0 rotate-45';
+export function XSThreeDots({containerClassName = "", dtoColor = "bg-[white]"}: Props) {
+    let s = 'w-2 h-2 md:w-2 md:h-2 rounded shrink-0 grow-0 rotate-45 ' + dtoColor;
     return (
         <div className={`${containerClassName} flex flex-col w-[1rem] md:w-[1.1rem]`}>
             <div className={`flex gap-[0.001rem] md:gap-[0.06rem]`}>
