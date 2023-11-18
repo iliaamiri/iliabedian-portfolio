@@ -1,3 +1,4 @@
+'use client';
 import {ArtifactModel} from "@/lib/models";
 import Link from "next/link";
 import {XSThreeDots} from "@/components/ThreeDots";
@@ -5,29 +6,33 @@ import {SkillBadgeRow} from "@/components/SkillBadgeRow";
 import {AestheticRender} from "@/components/AestheticRender";
 import {ArtifactActionButton} from "@/components/Buttons/ArtifactActionButton";
 import {Rowdies, Ubuntu} from "next/font/google";
+import {useRouter} from "next/navigation";
 
 const ubuntu = Ubuntu({subsets: ['latin'], weight: '500'})
 const rowdiesBold = Rowdies({subsets: ['latin'], weight: '700'})
 
 export function ArtifactItemOnRight({artifact}: { artifact: ArtifactModel }) {
+    const router = useRouter();
+
     return (
         <div className={`flex flex-col md:flex-row w-full justify-end`}>
-
             <div className={`flex-col flex justify-start items-start w-full md:w-7/12 pt-10`}>
                 <div className={`w-full md-w-11/12 flex flex-col justify-center items-center`}>
-                    {/*<Link href={`/artifact-detail/${artifact.slug}#readme`}*/}
-                    {/*      className={`w-11/12 md:w-9/12 hover:scale-[1.03] ease-in-out duration-300 cursor-pointer`}>*/}
-                            <div
-                                style={{backgroundImage: `url(/assets/mockups/${artifact.slug}.jpg)`}}
-                                className={`flex justify-center w-full md:w-full rounded-3xl justify-self-center aspect-video bg-no-repeat bg-cover`}>
-                            </div>
-                            <div
-                                className={`relative -top-20 flex flex-col w-full md:w-full text-black  rounded-b-2xl p-5 md:p-9 pt-20 md:pt-20`}>
-                                <p className={`${ubuntu.className} pt-2`}>
-                                    {artifact.summaryText}
-                                </p>
-                            </div>
-                    {/*</Link>*/}
+                    <div onClick={() => {
+                        document.querySelector('#readme')?.previousElementSibling?.scrollIntoView();
+                    }}
+                          className={`w-11/12 md:w-9/12 hover:scale-[1.03] ease-in-out duration-300 cursor-pointer`}>
+                        <div
+                            style={{backgroundImage: `url(/assets/mockups/${artifact.slug}.jpg)`}}
+                            className={`flex justify-center w-full md:w-full rounded-3xl justify-self-center aspect-video bg-no-repeat bg-cover`}>
+                        </div>
+                        <div
+                            className={`relative -top-20 flex flex-col w-full md:w-full text-black  rounded-b-2xl p-5 md:p-9 pt-20 md:pt-20`}>
+                            <p className={`${ubuntu.className} pt-2`}>
+                                {artifact.summaryText}
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 

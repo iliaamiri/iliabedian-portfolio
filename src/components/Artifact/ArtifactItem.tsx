@@ -1,3 +1,4 @@
+'use client';
 import {ArtifactModel} from "@/lib/models";
 import {randomIntFromInterval} from "@/lib/utils";
 import {ArtifactItemOnRight} from "@/components/Artifact/ArtifactItemOnRight";
