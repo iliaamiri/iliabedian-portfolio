@@ -95,6 +95,8 @@ export function MainHeader({}: {}) {
               </Link>
               <Link
                 href={'/about'}
+                onTouchEnd={handleTouchEndMenuItem}
+                onClick={handleTouchEndMenuItem}
                 className={`${rowdies.className} text-2xl text-white transition ease-in-out hover:text-secondaryDawn`}
               >
                 About
