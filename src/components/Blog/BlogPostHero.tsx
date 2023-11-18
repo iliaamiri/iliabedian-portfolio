@@ -32,7 +32,7 @@ export function BlogPostHero({
   }, []);
 
   return (
-    <div className={`-mt-20 flex w-full flex-col items-center md:-mt-40`}>
+    <div className={`-mt-[6.2rem] flex w-full flex-col items-center md:-mt-40`}>
       <div
         style={{
           backgroundImage: `url(${coverImage}), linear-gradient(to bottom, ${blog.placeholderColors[0]} 0%, ${blog.placeholderColors[1]} 100%)`,
