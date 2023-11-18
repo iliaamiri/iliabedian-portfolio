@@ -1,4 +1,4 @@
 export interface TechnologyModel {
-    skillName: string;
-    confidenceLevel: number; // out of 100
+  skillName: string;
+  confidenceLevel: number; // out of 100
 }

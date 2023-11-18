@@ -1,5 +1,5 @@
-import {artifacts} from "@/data/artifacts";
+import { artifacts } from '@/data/artifacts';
 
 export function getArtifact(slug: string) {
-    return artifacts[slug] || null;
+  return artifacts[slug] || null;
 }
