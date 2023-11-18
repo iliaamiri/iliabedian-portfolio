@@ -1,37 +1,37 @@
 import type { Metadata } from 'next';
-import {getBlog} from "@/app/blog/[slug]/helpers";
-import {Suspense} from "react";
-import {Loading} from "@/components/Loading";
+import { getBlog } from '@/app/blog/[slug]/helpers';
+import { Suspense } from 'react';
+import { Loading } from '@/components/Loading';
 
-export function generateMetadata({ params }: { params: { slug: string }}): Metadata {
-    const blog = getBlog(params.slug);
-    if (blog == null) {
-        return {
-            title: 'Page Not Found - 404',
-            description: 'The page you are looking for does not exist.',
-            keywords: '404, page not found, error',
-            authors: {
-                name: 'Eiliya Abedianamiri',
-                url: 'https://iliabedian.com',
-            }
-        }
-    }
-
+export function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Metadata {
+  const blog = getBlog(params.slug);
+  if (blog == null) {
     return {
-        title: blog.title,
-        description: blog.description,
-        keywords: blog.keywords.join(','),
-        authors: {
-            name: 'Eiliya Abedianamiri',
-            url: 'https://iliabedian.com',
-        }
-    }
+      title: 'Page Not Found - 404',
+      description: 'The page you are looking for does not exist.',
+      keywords: '404, page not found, error',
+      authors: {
+        name: 'Eiliya Abedianamiri',
+        url: 'https://iliabedian.com',
+      },
+    };
+  }
+
+  return {
+    title: blog.title,
+    description: blog.description,
+    keywords: blog.keywords.join(','),
+    authors: {
+      name: 'Eiliya Abedianamiri',
+      url: 'https://iliabedian.com',
+    },
+  };
 }
 
-export default function Layout({children}: { children: React.ReactNode }) {
-    return (
-        <Suspense fallback={<Loading />}>
-            {children}
-        </Suspense>
-    )
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return <Suspense fallback={<Loading />}>{children}</Suspense>;
 }
