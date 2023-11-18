@@ -126,18 +126,18 @@ export function MainHeader({}: {}) {
         ></div>
       </div>
       <div className={`hidden items-center justify-center gap-3 lg:flex`}>
-        <Link href={'/'}>
+        <a href={'/'}>
           <MenuButton>Home</MenuButton>
-        </Link>
+        </a>
         <ScrollLink id={`#artifacts`}>
           <MenuButton>Showcases</MenuButton>
         </ScrollLink>
-        <Link href={'/blog'}>
+        <a href={'/blog'}>
           <MenuButton>Blog</MenuButton>
-        </Link>
-        <Link href={'/about'}>
+        </a>
+        <a href={'/about'}>
           <MenuButton>About</MenuButton>
-        </Link>
+        </a>
         <ScrollLink id={`#contact`}>
           <MenuButton>Contact</MenuButton>
         </ScrollLink>
