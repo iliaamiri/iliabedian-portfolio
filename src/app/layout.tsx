@@ -46,7 +46,7 @@ export default function RootLayout({
                     <StyledHeader id={'contact'}>Contact</StyledHeader>
                     <Contact />
 
-                    {/*<Bangers />*/}
+                    <Bangers />
                 </div>
             </body>
         </html>
