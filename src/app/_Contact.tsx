@@ -4,7 +4,7 @@ import Script from "next/script";
 
 export function Contact() {
     return (
-        <div className={`flex flex-col justify-center items-center w-full mb-32`}>
+        <div className={`flex flex-col justify-center items-center w-full`}>
             <div className={`flex w-10/12 md:w-8/12 lg:w-5/12 justify-around pt-10`}>
                 <Link href={'https://twitter.com/iliaaamiri'} target={'_blank'}>
                     <DiamondCube text={'Twitter'} containerClassName={`grayscale hover:grayscale-0 contactDiamondCube bg-gradient-to-br from-[#1d9bf0] via-[#60a5fa] to-[#a5d8ff]  before:w-10 cursor-pointer`} />

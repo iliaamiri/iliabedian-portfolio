@@ -74,7 +74,6 @@ export default function Home({searchParams}: any) {
 
             <Artifacts searchParams={searchParams} />
 
-            <StyledHeader id={'contact'}>Contact</StyledHeader>
         </div>
     )
 }

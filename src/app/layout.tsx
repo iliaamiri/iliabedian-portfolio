@@ -2,7 +2,9 @@ import './globals.css';
 import type { Metadata } from 'next';
 import {MainHeader} from "@/components/MainHeader";
 import Script from "next/script";
-import {Contact} from "@/app/contact";
+import {Contact} from "@/app/_Contact";
+import {Bangers} from "@/app/_Bangers";
+import {StyledHeader} from "@/components/StyledHeader";
 
 export const metadata: Metadata = {
     title: 'Eiliya Abedianamiri',
@@ -41,7 +43,10 @@ export default function RootLayout({
                 <div className={`pt-40`}>
                     {children}
 
+                    <StyledHeader id={'contact'}>Contact</StyledHeader>
                     <Contact />
+
+                    <Bangers />
                 </div>
             </body>
         </html>

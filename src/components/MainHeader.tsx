@@ -4,7 +4,7 @@ import Logo from "../../public/assets/logo/circle-new-green.svg";
 import {ThreeDotsBurgerMenu} from "@/components/ThreeDots";
 import Link from "next/link";
 import {useEffect, useState} from "react";
-import { MenuButton } from "./Buttons/MenuButton";
+import {MenuButton, SpecialMenuButton} from "./Buttons/MenuButton";
 import {Rowdies} from "next/font/google";
 import ScrollLink from "@/components/ScrollLink";
 import {placeholdersBase64} from "@/lib/utils";
@@ -54,6 +54,7 @@ export function MainHeader({}: {}) {
                             <Link href={"/blog"} onTouchEnd={handleTouchEndMenuItem} onClick={handleTouchEndMenuItem} className={`${rowdies.className} text-white text-2xl hover:text-secondaryDawn transition ease-in-out`}>Blog</Link>
                             <Link href={"/about"} onTouchEnd={handleTouchEndMenuItem} onClick={handleTouchEndMenuItem} className={`${rowdies.className} text-white text-2xl hover:text-secondaryDawn transition ease-in-out`}>About</Link>
                             <ScrollLink scroll={false} href={`${origin}/#contact`} onTouchEnd={handleTouchEndMenuItem} onClick={handleTouchEndMenuItem} className={`${rowdies.className} text-white text-2xl hover:text-secondaryDawn transition ease-in-out`}>Contact</ScrollLink>
+                            <ScrollLink scroll={false} href={`${origin}/#bangers`} onTouchEnd={handleTouchEndMenuItem} onClick={handleTouchEndMenuItem} className={`${rowdies.className} text-white text-2xl hover:text-secondaryDawn transition ease-in-out`}>Bangers</ScrollLink>
                         </div>
                     </div>
                 </div>
@@ -66,6 +67,7 @@ export function MainHeader({}: {}) {
                 <Link href={"/blog"}><MenuButton>Blog</MenuButton></Link>
                 <Link href={"/about"}><MenuButton>About</MenuButton></Link>
                 <ScrollLink href={`${origin}/#contact`}><MenuButton>Contact</MenuButton></ScrollLink>
+                <ScrollLink href={`${origin}/#bangers`}><SpecialMenuButton>Bangers</SpecialMenuButton></ScrollLink>
             </div>
         </nav>
     );
