@@ -15,8 +15,8 @@ export function ArtifactItemOnRight({artifact}: { artifact: ArtifactModel }) {
 
             <div className={`flex-col flex justify-start items-start w-full md:w-7/12 pt-10`}>
                 <div className={`w-full md-w-11/12 flex flex-col justify-center items-center`}>
-                    <Link href={`/artifact-detail/${artifact.slug}#readme`}
-                          className={`w-11/12 md:w-9/12 hover:scale-[1.03] ease-in-out duration-300 cursor-pointer`}>
+                    {/*<Link href={`/artifact-detail/${artifact.slug}#readme`}*/}
+                    {/*      className={`w-11/12 md:w-9/12 hover:scale-[1.03] ease-in-out duration-300 cursor-pointer`}>*/}
                             <div
                                 style={{backgroundImage: `url(/assets/mockups/${artifact.slug}.jpg)`}}
                                 className={`flex justify-center w-full md:w-full rounded-3xl justify-self-center aspect-video bg-no-repeat bg-cover`}>
@@ -27,7 +27,7 @@ export function ArtifactItemOnRight({artifact}: { artifact: ArtifactModel }) {
                                     {artifact.summaryText}
                                 </p>
                             </div>
-                    </Link>
+                    {/*</Link>*/}
                 </div>
             </div>
 
