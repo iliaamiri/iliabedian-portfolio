@@ -78,6 +78,8 @@ export function MainHeader({}: {}) {
                 Home
               </Link>
               <ScrollLink
+                redirect={true}
+                href={`${origin}/#artifacts`}
                 id={`#artifacts`}
                 onTouchEnd={handleTouchEndMenuItem}
                 onClick={handleTouchEndMenuItem}
@@ -131,7 +133,11 @@ export function MainHeader({}: {}) {
         <a href={'/'}>
           <MenuButton>Home</MenuButton>
         </a>
-        <ScrollLink id={`#artifacts`}>
+        <ScrollLink
+          redirect={true}
+          href={`${origin}/#artifacts`}
+          id={`#artifacts`}
+        >
           <MenuButton>Showcases</MenuButton>
         </ScrollLink>
         <a href={'/blog'}>
