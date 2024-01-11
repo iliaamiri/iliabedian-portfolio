@@ -2,32 +2,30 @@ import {Note} from '@/components/Markdown/Note';
 import Image_Showcase from './assets/showcase.gif';
 import Image_Showcasing from './assets/showcasing.png';
 
-I love debuggers. Even though sometimes I log to the console, I lean more towards using debuggers. A quote from unknown:
+I love debuggers. Even though sometimes I log to the console, I lean more towards using debuggers and
+I really like this saying about not debuggers:
 > When you're not using a debugger, it's like trying to navigate in the dark.
 
-This is not a cult by any means. But, I really think that more people should start using debuggers. My guess is that they
+I believe more people should start using debuggers. My guess is that people
 don't feel confident setting up the debugger because they think it's a difficult process and takes their time.
 
-Every time I talked with some other developers about debuggers, the majority started arguing why logging to the console is
-better than debuggers.
-
-And by "other developers" I mean most of the JavaScript community. Although I've seen a few people who
-actually like using debuggers, I'm still in this belief that most of them prefer not using them.
+Hence, I made this article to show you how easy it can be to set up despite the perception that it's difficult.
 
 ## Why should you use a debugger?
 Furiously logging things to your console can sometimes be tiring. Haven't you ever written swear words in your console?
+(Don't do that; it's not a good practice)
 ```js
-console.log("AAAAAAAAAAAAAAAAAAAAAAAAA FREAKING BISH", user, user.friends);
+console.log("-----------", user, user.friends);
 
-console.log("I'm malding", user)
+console.log("I am", user)
 console.log("@*%%^#$#$(", req.cookie)
 console.log("******", user.password) // 🤦
 ```
 
-Like, I just wanna know what's `user` in my code. Is that why it's not working? Or is it because of `user.friends`? I don't know.
+Here, I just want to know what's the value of `user` in my code. Is that why it's not working? Or is it because of `user.friends`? I don't know.
 If I use a debugger, all I have to do is to click next to the line where I'm reading the value of `user` to set a breakpoint.
 
-And, next time I run my app, not only I can see the value of `user` and it's ancestors, but I could also move line-by-line.
+And, next time I run my app, not only I can see the value of `user` and it's ancestors, but I could move through it line-by-line.
 
 ## When should you even use a debugger?
 You should use a debugger as much as you can. If the project allows you to use a debugger in a sense that it doesn't make
@@ -38,16 +36,35 @@ using a debugger is almost impossible. In this case, you kind of have to use log
 developing a software that doesn't require real-time interaction as much. Or if it does, it's slow and there are not so many
 events that are simultaneously happening.
 
+I genuinely believe that it helps with developer productivity. You'll have less mental overhead while debugging. It's similar
+to a calculator. You can do math without a calculator. But, it's much easier and faster to use a calculator.
+
 ## How to use it?
 <Note type='warning'>
-This article won't cover how to setup a specific debugger. It rather focuses on how to use a debugger once you set it up.
+This article **won't** cover **how to setup** a specific debugger. It rather focuses on **how to use** a debugger once you set it up.
 Depending on your programming language and your project environment, you'll need to find your debugger and actually take the time
 and read their instructions.
 </Note>
 
+<Note type='info'>
+  I do have an article that shows **how to setup** a debugger for a Node.js project on JetBrains IDEs. You can check that out
+  [here](http://localhost:3001/blog/setup-debugger-in-webstorm-typescript-projects).
+</Note>
+
+### What's a breakpoint?
+A breakpoint, as its name sounds, is a point you set on a line of your code where you want to stop your app from running further and start analyzing every
+variable in that part of your code.
+
+You can jump over the next line from the breakpoint you set, or you can go inside a function call and see what happens in that function.
+The debugger tool will let you see every variable in your scope and their values, so _you don't have to log them yourself **manually**_.
+
 ### Setting a breakpoint
-Setting a breakpoint is easy. All you have to do is to click on the line number where you want to set a breakpoint. If you're
-using VSCode, you can also click on the left side of the line number to set a breakpoint. It's the same thing.
+Setting a breakpoint is easy. All you have to do is to click on the line number where you want to set a breakpoint.
+
+Depending on which IDE you're using, you can set a breakpoint by clicking on the left side of your code editor where the lines reside.
+
+If you're using a VSCode IDE, you can also click on the left side of the line number to set a breakpoint. It's the same thing for
+JetBrains IDEs and other modern IDEs.
 
 ### Running the debugger
 Once you set a breakpoint, you can run your app. Hit that play button or the button with a bug icon. Usually, your editor
@@ -63,10 +80,10 @@ Notice how the debugger stopped at the line where I set a breakpoint. Now, I can
 
 Now, I have a few options to play with:
 
-1. Step over: This will move to the next line. If the next line is a function call, it won't go inside the function and
+1. **Step over**: This will move to the next line. If the next line is a function call, it won't go inside the function and
 will just move to the next line.
-2. Step in: If you want to go inside a function, you can use this.
-3. Step out: If you're inside a function and want to go back to the caller, you can use this.
+2. **Step in**: If you want to go inside a function, you can use this.
+3. **Step out**: If you're inside a function and want to go back to the caller, you can use this.
 
 <Note type='info'>
 And, I recommend using the keyboard shortcuts for these. It's much easier and faster than clicking on the buttons.
@@ -82,9 +99,12 @@ Here's some points that I want to highlight:
 
 ## Conclusion
 Again, I'm not saying that you should use a debugger all the time. But, if you're not using a debugger at all, you should
-probably start using it. What I always tell people is that, _using a debugger can prevent your hair from turning grey_.
+probably start using it. What I always tell people is that, _using a debugger can prevent your hair from turning grey faster_.
 
-I hope you enjoyed this article. If you have any questions, feel free to reach out to me on Twitter.
+I hope you enjoyed this article. If you have any questions, feel free to reach out to me. I always welcome feedbacks and criticisms. 😊
 
-I'd love to hear your rant and swear words about me using a debugger. Just kidding. I'd love to hear your thoughts about this
-whole debugger thing. Do you use a debugger? If not, why? If yes, why? Let me know on Twitter.
+I'd love to hear your thoughts about debuggers.
+
+Do you use a debugger? If not, why? If yes, why?
+
+Let me know. 👇👇👇
