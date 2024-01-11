@@ -117,7 +117,7 @@ export function MainHeader({}: {}) {
                 onClick={handleTouchEndMenuItem}
                 className={`${rowdies.className} text-2xl text-white transition ease-in-out hover:text-secondaryDawn`}
               >
-                Bangers
+                Music for Coding
               </ScrollLink>
             </div>
           </div>
@@ -150,7 +150,7 @@ export function MainHeader({}: {}) {
           <MenuButton>Contact</MenuButton>
         </ScrollLink>
         <ScrollLink id={`#bangers`}>
-          <SpecialMenuButton>Bangers</SpecialMenuButton>
+          <SpecialMenuButton>Music for Coding</SpecialMenuButton>
         </ScrollLink>
       </div>
     </nav>

@@ -10,7 +10,7 @@ export function Bangers() {
           style={{
             borderRadius: '12px',
           }}
-          src='https://open.spotify.com/embed/playlist/6p5DhO7awb6KowxH8x8RbM?utm_source=generator&theme=0'
+          src='https://open.spotify.com/embed/playlist/0gxi5avqGS91xaR6tyAnb9?utm_source=generator&theme=0'
           width='100%'
           height='500'
           frameBorder='0'
