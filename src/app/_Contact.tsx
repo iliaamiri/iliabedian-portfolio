@@ -6,12 +6,12 @@ export function Contact() {
   return (
     <div className={`flex w-full flex-col items-center justify-center`}>
       <div className={`flex w-10/12 justify-around pt-10 md:w-8/12 lg:w-5/12`}>
-        <Link href={'https://twitter.com/iliaaamiri'} target={'_blank'}>
-          <DiamondCube
-            text={'Twitter'}
-            containerClassName={`grayscale hover:grayscale-0 contactDiamondCube bg-gradient-to-br from-[#1d9bf0] via-[#60a5fa] to-[#a5d8ff]  before:w-10 cursor-pointer`}
-          />
-        </Link>
+        {/*<Link href={'https://twitter.com/iliaaamiri'} target={'_blank'}>*/}
+        {/*  <DiamondCube*/}
+        {/*    text={'Twitter'}*/}
+        {/*    containerClassName={`grayscale hover:grayscale-0 contactDiamondCube bg-gradient-to-br from-[#1d9bf0] via-[#60a5fa] to-[#a5d8ff]  before:w-10 cursor-pointer`}*/}
+        {/*  />*/}
+        {/*</Link>*/}
         <Link
           href={'https://www.linkedin.com/in/eiliya-abedianamiri/'}
           target={'_blank'}
@@ -35,15 +35,15 @@ export function Contact() {
             containerClassName={`grayscale hover:grayscale-0 contactDiamondCube bg-gradient-to-br from-[#A198EE] via-[#2D6A4F] to-[#48AD7E] before:w-10 cursor-pointer`}
           />
         </Link>
-        <Link
-          href={'https://youtube.com/@iliabedian?si=ie0KvgVWi14zydQq'}
-          target={'_blank'}
-        >
-          <DiamondCube
-            text={'YouTube'}
-            containerClassName={`grayscale hover:grayscale-0 contactDiamondCube bg-gradient-to-br from-[#22246A] via-[#2D6A4F] to-[#48AD7E] cursor-pointer`}
-          />
-        </Link>
+        {/*<Link*/}
+        {/*  href={'https://youtube.com/@iliabedian?si=ie0KvgVWi14zydQq'}*/}
+        {/*  target={'_blank'}*/}
+        {/*>*/}
+        {/*  <DiamondCube*/}
+        {/*    text={'YouTube'}*/}
+        {/*    containerClassName={`grayscale hover:grayscale-0 contactDiamondCube bg-gradient-to-br from-[#22246A] via-[#2D6A4F] to-[#48AD7E] cursor-pointer`}*/}
+        {/*  />*/}
+        {/*</Link>*/}
       </div>
       <Script
         async={true}
