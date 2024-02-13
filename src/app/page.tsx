@@ -25,7 +25,7 @@ export default function Home({ searchParams }: any) {
         </h1>
         <p className={'md:w-5/12'}>
           <span className={`text-primaryDawn`}>Full-stack developer</span>,{' '}
-          <span className={`text-primaryDawn`}>software engineer</span>, and{' '}
+          <span className={`text-primaryDawn`}>software craftsman</span>, and{' '}
           <span className={`text-primaryDawn`}>researcher</span> learning new
           things and building cool projects. Welcome to my portfolio.
         </p>
