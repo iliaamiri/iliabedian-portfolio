@@ -24,10 +24,10 @@ export default function Home({ searchParams }: any) {
           <span className={`text-primaryDawn`}>a</span> Abedianamiri
         </h1>
         <p className={'md:w-5/12'}>
-          <span className={`text-primaryDawn`}>Full-stack developer</span>,{' '}
-          <span className={`text-primaryDawn`}>software craftsman</span>, and{' '}
-          <span className={`text-primaryDawn`}>researcher</span> learning new
-          things and building cool projects. Welcome to my portfolio.
+          <span className={`text-primaryDawn`}>Full-stack developer</span> and{' '}
+          <span className={`text-primaryDawn`}>software programmer</span> always
+          learning new things and building cool projects. Welcome to my
+          portfolio.
         </p>
       </div>
 

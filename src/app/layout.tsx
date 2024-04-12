@@ -5,6 +5,7 @@ import Script from 'next/script';
 import { Contact } from '@/app/_Contact';
 import { Bangers } from '@/app/_Bangers';
 import { StyledHeader } from '@/components/StyledHeader';
+import { PropsWithChildren } from 'react';
 
 export const metadata: Metadata = {
   title: 'Eiliya Abedianamiri',
@@ -12,28 +13,26 @@ export const metadata: Metadata = {
     name: 'Eiliya Abedianamiri',
     url: 'https://iliaabedian.com',
   },
-  applicationName: "Ilia Abedian's Portfolio and Blog",
+  applicationName: "Eiliya's Portfolio and Blog",
   keywords: [
     'eiliya abedianamiri',
     'ilia abedianamiri',
     'abedian',
+    'abedianamiri',
     'portfolio',
     'blog',
     'developer',
     'software engineer',
+    'software programmer',
   ],
   description:
-    'Full-stack developer, software engineer, and researcher learning new things and building cool projects. Welcome to my portfolio.',
+    'Full-stack developer and software programmer avidly learning new things and building cool projects. Welcome to my portfolio.',
   icons: {
     icon: '/assets/logo/circle-cream.svg',
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang='en'>
       <head>
