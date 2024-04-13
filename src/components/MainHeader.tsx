@@ -115,7 +115,7 @@ export function MainHeader({}: {}) {
                 id={`#bangers`}
                 onTouchEnd={handleTouchEndMenuItem}
                 onClick={handleTouchEndMenuItem}
-                className={`${rowdies.className} text-2xl text-white transition ease-in-out hover:text-secondaryDawn`}
+                className={`${rowdies.className} whitespace-nowrap text-xl text-white transition ease-in-out hover:text-secondaryDawn md:text-2xl`}
               >
                 Music for Coding
               </ScrollLink>
@@ -129,6 +129,8 @@ export function MainHeader({}: {}) {
           } fixed right-0 top-0 h-[100vh] w-full bg-[#1F4735]/60 backdrop-blur-[3px]`}
         ></div>
       </div>
+
+      {/* region Desktop Navbar */}
       <div className={`hidden items-center justify-center gap-3 lg:flex`}>
         <a href={'/'}>
           <MenuButton>Home</MenuButton>
