@@ -155,6 +155,7 @@ export function MainHeader({}: {}) {
           <SpecialMenuButton>Music for Coding</SpecialMenuButton>
         </ScrollLink>
       </div>
+      {/* endregion Desktop Navbar */}
     </nav>
   );
 }
