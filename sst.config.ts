@@ -4,7 +4,7 @@ export default $config({
   app(input) {
     return {
       name: 'iliabedian-portfolio',
-      removal: input?.stage === 'production' ? 'retain' : 'remove',
+      removal: 'remove',
       home: 'aws',
       providers: {
         aws: {
@@ -15,11 +15,16 @@ export default $config({
     };
   },
   async run() {
+    const isProd = $app.stage === 'production';
+
+    const aliases = isProd ? undefined : ['test.iliabedian.com'];
+    const redirects = isProd ? ['www.iliabedian.com'] : undefined;
+
     new sst.aws.Nextjs('IliabedianPortfolio', {
       domain: {
-        name:
-          $app.stage === 'production' ? 'iliabedian.com' : 'dev.iliabedian.com',
-        aliases: ['test.iliabedian.com'],
+        name: isProd ? 'iliabedian.com' : 'dev.iliabedian.com',
+        aliases,
+        redirects,
       },
     });
   },
