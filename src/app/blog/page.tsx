@@ -17,7 +17,7 @@ export function generateMetadata(): Metadata {
 
 export default function BlogIndex() {
   return (
-    <div>
+    <div className='-mt-20 md:mt-0'>
       <StyledHeader>Blogs & Articles</StyledHeader>
       <div
         className={`grid w-full grid-cols-1 items-stretch justify-items-center gap-16 px-5 pb-20 pt-10 lg:grid-cols-2 lg:gap-10 lg:px-40 xl:grid-cols-3 xl:gap-5`}

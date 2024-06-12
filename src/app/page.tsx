@@ -12,7 +12,7 @@ const rowdies = Rowdies({ subsets: ['latin'], weight: '300' });
 
 export default function Home({ searchParams }: any) {
   return (
-    <div>
+    <div className='-mt-20 md:mt-0'>
       <div
         className={`${rowdies.className} flex w-full flex-col items-center justify-center gap-5 px-5 text-center`}
       >

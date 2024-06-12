@@ -30,7 +30,7 @@ export default function ArtifactDetail() {
   );
 
   return (
-    <div>
+    <div className='-mt-20 md:mt-0'>
       <StyledHeader>{artifact.name}</StyledHeader>
       <ArtifactItem artifact={artifact} isOnRight={artifact.id % 2 === 0} />
       <MarkdownContainer>
