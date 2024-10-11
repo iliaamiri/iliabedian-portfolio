@@ -1,0 +1,172 @@
+If you're here to figure out how to center that DIV, well, you came into the right and wrong place!
+
+CSS is probably one of the most hated language on planet earth, correct me if I'm wrong.
+
+## There are things to love
+Let's be real here. We all love CSS animations. We all ADMIRE CSS stylings.
+I mean  who doesn't love seeing the background color changes as you change some
+code? That's what hooked all of us in CSS at first.
+
+We thought, "Oh, this is how I apply colours to my app! Super cool! I love CSS."
+
+However...
+
+## The hated aspects of CSS
+The true parts that everyone hates about CSS are two main ones:
+1. Layouting (e.g.: Centering a DIV - a classic - this is why you're here probably)
+2. Specificity (e.g.: Your styles won't apply no matter what you do! - and some use !important all the time, understandably)
+3. Selectors (e.g.: How on earth does the `nth()` work?!)
+
+## Why the hate?
+We all hate things we can't understand easy. Why no one hates HTML? Well, it's
+easy to learn. Very straightforward. Not much to learn really is it?
+
+By the way, Shoutout to W3Schools for its beginner friendly tutorials. Although the best path
+to follow is MDN, but hey, we all start from somewhere :)
+
+But back to CSS...
+
+CSS does not play. You either submit or you give up. At least this is how it looks
+like in the beginning!
+
+There are various "correct" ways to achieve something in CSS. Almost no one is
+wrong ("if it works, don't touch it" kinda vibe).
+
+Despite that, there is almost always a better solution to implement layouts.
+
+You may or may not know that back in the early 90's, developers used HTML `<table>` tag
+for layouting.
+
+Things were simpler back then. There were no other way to do layouts in CSS.
+However, developers realized that tables should be used for just tabular data.
+Any other use-cases for `<table>` defeats the purpose of accessiblity.
+
+Hence, handling layouts using CSS became more popular and in the late 90's, developers
+used CSS Positions to layout things on their pages.
+
+Fast forward to the mid 2000s. CSS has floats and display. Huge changes!
+Yet, it was a pain to do layouting. Until Grid and Flexbox were introduced.
+
+## How can you unhate these?
+Well, spending time and investing on Grid and Flexbox has made CSS more enjoyable for me.
+
+If you're geniunely here to know how to center a DIV, it means you're not familiar
+with Flexbox and/or Grid.
+
+I actually believe that everyone can get good at CSS layouting by mastering Flexbox and Grid.
+
+And I have the best resources to share with you.
+
+I'm not sponsored by any of them. This is merely my geniune goal to see others
+see what I'm seeing. Brings me joy.
+
+To learn Flexbox the interactive way, I'd recommend playing the [Flexbox Forggy game](https://flexboxfroggy.com/).
+
+There's also a similar game for learning Grid. Checkout [CSS Grid Garden](https://cssgridgarden.com/)
+
+For my manual reader fellows, I have alternatives:
+[A guide to Flexbox from CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+[A guide to Grid from CSS Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+You are going to become the master of DIV centering.
+
+I would recommend you to read the P.S. note after you learned these two.
+
+P.S. The joke is not even funny. We all know how to center a DIV.
+
+## So, How do you center a DIV?
+Well, use flexbox or grid. Flexbox has an easier learning curve, so I'd recommend using
+that most of the time.
+
+Imagine you have a container (could be any element) and you want to center another element (any element) inside it.
+
+```html
+<div class="parent">
+  <div class="child">
+    I'm centered, I guess.
+  </div>
+</div>
+```
+
+```css
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+That's it. You're done. You've centered a DIV.
+
+Note: The rest of this article contains my opinions and thoughts on the the other two
+hated aspects of CSS.
+
+## CSS selectors are Fascinating
+CSS selectors, in my opinion, are one of the most genius engineering pieces in
+Web Development.
+
+jQuery engineers knew this very well, and that's why they adapted CSS selectors
+in one of the core parts of their library, which is the element selector (the `$('#root')` syntax).
+
+You can select **any** element in the DOM you want. You can do as simple as `.your-dad`
+which selects all elements that have "your-dad" class in their class list. Or, you can
+do `#your-uncle` which selects the element that has "your-uncle"s ID.
+
+More complex examples are selecting [nth element](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child).
+Doing these things in JavaScript is absurd when you have such powers in CSS.
+
+There are fascinating websites that are made with no JavaScript to showcase the
+power of CSS.
+
+## Specificity
+Browsers have CSS styles by default. So, our CSS styles apply on top of those.
+In a CSS file, the latest styles preceed the rest of the styles. But even knowing
+all these is not enough to understand why your new `background-color` style doesn't
+do **anything**! And the only wayaround you see on stackoverflow is to use `!important`.
+
+Well, the issue with using `!important` is it is easy to over-use. If everything is
+important, then nothing is important anymore. It loses its meaning.
+
+My preferred solution is to either find out where the problem lies, OR first understand
+how CSS specifity _really_ **really** works. Instead of getting frustrated and
+using !important, start thinking about an alternative to select the elements you want
+in a more specific way.
+
+As a result of that, your CSS code will become much more direct and specific (duh),
+and you won't fall into the trap of `!important` soup.
+
+For example, if your `border` doesn't seem to apply to your `.navbar-item`, try
+selecting the elements by their tag name. Maybe you have `li` tags having this class.
+So, you can select `li.navabar-item`. That itself just became more specific.
+
+It's not CSS' fault.
+
+Don't hate the game. Hate the player. (Disclaimer: Don't actaully hate yourself. It was a
+figure of speech).
+
+Get good at specificty, and you will no longer find yourself **confused** and in shambles.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+
+"""
+Specificity is the algorithm used by browsers to determine the CSS declaration
+that is the most relevant to an element, which in turn, determines the property value to apply to the element.
+"""
+
+Literally the first sentence of the first paragraph of MDN. You don't need `!important`
+every time.
+
+It was a mistake.
+
+## A piece of Art
+If you ask me, CSS is a _piece of art_. It is one of the most sophisticated and
+well-engineered scripting languages ever existed.
+
+It is one of the most hated languages to the point that everyone avoids discussing
+CSS or even memeing about it. The only jokes made for CSS are basically
+made to show how disgusting, confusing, and stubborn this tool is.
+
+I hope I could convince you to ponder and maybe love CSS for its bless and not
+its pain-inducing nature.
+
+Anyway.
