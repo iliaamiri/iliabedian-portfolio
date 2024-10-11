@@ -1,7 +1,7 @@
 'use client';
 import { useParams } from 'next/navigation';
 import { NotFound } from '@/components/Errors/404';
-import { getArtifact } from '@/app/artifact-detail/[slug]/helpers';
+import { getArtifact } from '@/app/(root)/artifact-detail/[slug]/helpers';
 import dynamic from 'next/dynamic';
 import { DynamicOptions } from 'next/dist/shared/lib/dynamic';
 import { StyledHeader } from '@/components/StyledHeader';

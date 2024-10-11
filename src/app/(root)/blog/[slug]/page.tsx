@@ -2,7 +2,7 @@
 import { useParams } from 'next/navigation';
 import { code } from '@/lib/code';
 import { BlogPageWrapper } from '@/components/Blog/BlogPageWrapper';
-import { getBlog } from '@/app/blog/[slug]/helpers';
+import { getBlog } from '@/app/(root)/blog/[slug]/helpers';
 import dynamic from 'next/dynamic';
 import { DynamicOptions } from 'next/dist/shared/lib/dynamic';
 import { NotFound } from '@/components/Errors/404';

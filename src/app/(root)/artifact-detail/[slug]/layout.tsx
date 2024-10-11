@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { Loading } from '@/components/Loading';
-import { getArtifact } from '@/app/artifact-detail/[slug]/helpers';
+import { getArtifact } from '@/app/(root)/artifact-detail/[slug]/helpers';
 
 export function generateMetadata({
   params,

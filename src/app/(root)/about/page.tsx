@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { StyledHeader } from '@/components/StyledHeader';
 import { MarkdownContainer } from '@/components/Markdown/MarkdownContainer';
-import { HeadshotImage } from '@/app/about/HeadshotImage';
-import HeroCoverSrc from '../../../public/assets/hero-cover.png';
+import { HeadshotImage } from '@/app/(root)/about/HeadshotImage';
+import HeroCoverSrc from '../../../../public/assets/hero-cover.png';
 import dynamic, { DynamicOptions } from 'next/dynamic';
 
 export default function About() {
@@ -10,7 +10,7 @@ export default function About() {
     () =>
       import(
         /* webpackInclude: /\.mdx$/ */
-        `@/app/about/content.mdx`
+        `@/app/(root)/about/content.mdx`
       ),
     {
       ssr: true,

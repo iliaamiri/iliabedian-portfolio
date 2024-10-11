@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { getBlog } from '@/app/blog/[slug]/helpers';
+import { getBlog } from '@/app/(root)/blog/[slug]/helpers';
 import { Suspense } from 'react';
 import { Loading } from '@/components/Loading';
 

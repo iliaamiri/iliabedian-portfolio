@@ -2,8 +2,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { MainHeader } from '@/components/MainHeader';
 import Script from 'next/script';
-import { Contact } from '@/app/_Contact';
-import { Bangers } from '@/app/_Bangers';
+import { Contact } from '@/app/(root)/_Contact';
+import { Bangers } from '@/app/(root)/_Bangers';
 import { StyledHeader } from '@/components/StyledHeader';
 import { PropsWithChildren } from 'react';
 

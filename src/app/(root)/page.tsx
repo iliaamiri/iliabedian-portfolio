@@ -2,7 +2,7 @@ import { Rowdies } from 'next/font/google';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AestheticRender } from '@/components/AestheticRender';
-import IliaHeadshotSVG from '../../public/assets/ilia-headshot.svg';
+import IliaHeadshotSVG from '../../../public/assets/ilia-headshot.svg';
 import { placeholdersBase64 } from '@/lib/utils';
 import { ArtifactCategory } from '@/lib/models';
 import { CategorySelector } from '@/components/Artifact/CategorySelector';
